@@ -1,0 +1,55 @@
+module Clock(clk,clk_1s,HEX);
+	input clk;
+	output reg clk_1s;
+	output HEX;
+	reg [6:0] HEX[0:5];
+	reg [7:0] count;
+	reg [16:0] count_clk;
+	initial begin
+	count_clk=0;
+	count=0;
+	end	
+	
+	always @(posedge clk)
+	begin
+		if(count_clk==25000000)
+		begin
+			clk_1s<=~clk_1s;
+			count_clk<=0;
+		end
+		else
+			count_clk<=count_clk+1;
+	end
+	
+	always @(posedge clk_1s)
+	begin
+		if(count==86399)
+		begin
+			count<=0;
+		end
+		else
+		begin
+			count<=count+1;	
+		end
+	end
+	
+	always @(count)
+	begin
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	end
+	
+endmodule

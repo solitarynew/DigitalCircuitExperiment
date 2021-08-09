@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at top_flyinglogo.v(113): always construct contains both blocking and non-blocking assignments File: D:/data/Homework/FPGA/Exp/Exp9/move/top_flyinglogo.v Line: 113

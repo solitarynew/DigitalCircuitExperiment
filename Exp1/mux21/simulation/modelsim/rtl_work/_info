@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/data/Homework/FPGA/Exp/a1/mux21/simulation/modelsim
+vmux21
+Z1 !s110 1599995145
+!i10b 1
+!s100 O1n<mCTQLkO4^`U_G]1ZF1
+Il17gRUfZj7DS5a]H<>_IO0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1599993326
+8D:/data/Homework/FPGA/Exp/a1/mux21/mux21.v
+FD:/data/Homework/FPGA/Exp/a1/mux21/mux21.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1599995145.000000
+!s107 D:/data/Homework/FPGA/Exp/a1/mux21/mux21.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/a1/mux21|D:/data/Homework/FPGA/Exp/a1/mux21/mux21.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/a1/mux21
+Z6 tCvgOpt 0
+vmux21_vlg_tst
+R1
+!i10b 1
+!s100 E?z<3V_E8Wfl]zUDcNT?k2
+I4fC;`f<Mmg?ZKVW?S0`On3
+R2
+R0
+w1599995076
+8D:/data/Homework/FPGA/Exp/a1/mux21/simulation/modelsim/mux21.vt
+FD:/data/Homework/FPGA/Exp/a1/mux21/simulation/modelsim/mux21.vt
+L0 28
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/data/Homework/FPGA/Exp/a1/mux21/simulation/modelsim/mux21.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/a1/mux21/simulation/modelsim|D:/data/Homework/FPGA/Exp/a1/mux21/simulation/modelsim/mux21.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/a1/mux21/simulation/modelsim
+R6

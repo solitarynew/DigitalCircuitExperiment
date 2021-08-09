@@ -1,0 +1,120 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/data/Homework/FPGA/Exp/Exp5/clk/simulation/modelsim
+vclk
+Z1 !s110 1601306984
+!i10b 1
+!s100 FeLYKc;IVPQo7dV`JnVWA3
+I5R0?Jh353b6Wi:A_@Xf>o0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1601305976
+8D:/data/Homework/FPGA/Exp/Exp5/clk/clk.v
+FD:/data/Homework/FPGA/Exp/Exp5/clk/clk.v
+L0 6
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1601306983.000000
+!s107 D:/data/Homework/FPGA/Exp/Exp5/clk/clk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp5/clk|D:/data/Homework/FPGA/Exp/Exp5/clk/clk.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp5/clk
+Z7 tCvgOpt 0
+vclk_vlg_tst
+R1
+!i10b 1
+!s100 8lT^H938D0ZWWo;ikGD`N0
+IUSUlDSM@H5e;TVId:YH<d1
+R2
+R0
+w1601306972
+8D:/data/Homework/FPGA/Exp/Exp5/clk/simulation/modelsim/clk.vt
+FD:/data/Homework/FPGA/Exp/Exp5/clk/simulation/modelsim/clk.vt
+L0 28
+R3
+r1
+!s85 0
+31
+!s108 1601306984.000000
+!s107 D:/data/Homework/FPGA/Exp/Exp5/clk/simulation/modelsim/clk.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp5/clk/simulation/modelsim|D:/data/Homework/FPGA/Exp/Exp5/clk/simulation/modelsim/clk.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp5/clk/simulation/modelsim
+R7
+vclock
+Z8 !s110 1601306983
+!i10b 1
+!s100 ?inn4i<3Z@7U548bLE5nI3
+I_bZcMGTVki5G?]_MK5Um^1
+R2
+R0
+w1601279588
+8D:/data/Homework/FPGA/Exp/Exp5/clk/clock.v
+FD:/data/Homework/FPGA/Exp/Exp5/clk/clock.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/data/Homework/FPGA/Exp/Exp5/clk/clock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp5/clk|D:/data/Homework/FPGA/Exp/Exp5/clk/clock.v|
+!i113 1
+R5
+R6
+R7
+vdecode_hex
+R8
+!i10b 1
+!s100 gRALBcCNX4WK1e9QHHUOH1
+IMBo7c3dA]kUQ?@:cDW03l2
+R2
+R0
+w1601278724
+8D:/data/Homework/FPGA/Exp/Exp5/clk/decode_hex.v
+FD:/data/Homework/FPGA/Exp/Exp5/clk/decode_hex.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/data/Homework/FPGA/Exp/Exp5/clk/decode_hex.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp5/clk|D:/data/Homework/FPGA/Exp/Exp5/clk/decode_hex.v|
+!i113 1
+R5
+R6
+R7
+vdiv
+R8
+!i10b 1
+!s100 @klNeHhE8:_Zd=P:eanBT2
+I835dAEI2W`T;XOj;9[^_K0
+R2
+R0
+w1601276858
+8D:/data/Homework/FPGA/Exp/Exp5/clk/div.v
+FD:/data/Homework/FPGA/Exp/Exp5/clk/div.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/data/Homework/FPGA/Exp/Exp5/clk/div.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp5/clk|D:/data/Homework/FPGA/Exp/Exp5/clk/div.v|
+!i113 1
+R5
+R6
+R7

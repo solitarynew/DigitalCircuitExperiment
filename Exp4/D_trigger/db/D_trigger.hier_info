@@ -1,0 +1,26 @@
+|D_trigger
+clk => clk.IN2
+in_d => in_d.IN2
+en => en.IN2
+clr => clr.IN2
+out_q1 << D_synctrigger:D_trigger1.out_q
+out_q2 << D_asynctrigger:D_trigger2.out_q
+
+
+|D_trigger|D_synctrigger:D_trigger1
+clk => out_q~reg0.CLK
+in_d => out_q.DATAA
+en => out_q~reg0.ENA
+clr => out_q.OUTPUTSELECT
+out_q <= out_q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|D_trigger|D_asynctrigger:D_trigger2
+clk => out_q~reg0.CLK
+in_d => out_q~reg0.DATAIN
+en => out_q.OUTPUTSELECT
+en => out_q~reg0.ENA
+clr => out_q~reg0.ALOAD
+out_q <= out_q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

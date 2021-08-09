@@ -1,0 +1,5 @@
+module alarm(en,alt_s,alt_m,alt_h,count)
+
+
+
+endmodule

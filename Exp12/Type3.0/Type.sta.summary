@@ -1,0 +1,117 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK2_50'
+Slack : 12.270
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 50.558
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK2_50'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.680
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.233
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK2_50'
+Slack : 8.698
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 26.427
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK2_50'
+Slack : 12.307
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 50.635
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK2_50'
+Slack : 0.222
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.722
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.233
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK2_50'
+Slack : 8.658
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 26.365
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK2_50'
+Slack : 15.354
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 51.894
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK2_50'
+Slack : 0.135
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.303
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.233
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK2_50'
+Slack : 8.474
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 26.678
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK2_50'
+Slack : 15.687
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 52.121
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK2_50'
+Slack : 0.123
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.296
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.233
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK2_50'
+Slack : 8.428
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u1|audio_clk_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 26.668
+TNS   : 0.000
+
+------------------------------------------------------------

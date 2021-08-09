@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at ps2_keyboard.v(28): always construct contains both blocking and non-blocking assignments File: D:/data/Homework/FPGA/Exp/Exp12/Type2.0/ps2_keyboard.v Line: 28

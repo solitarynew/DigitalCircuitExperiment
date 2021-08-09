@@ -1,0 +1,4 @@
+module getcolor(input [9:0] h_addr,input [9:0] h_addr,output [23:0] vga_data);
+
+
+endmodule;

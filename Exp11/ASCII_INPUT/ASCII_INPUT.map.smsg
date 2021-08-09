@@ -1,0 +1,7 @@
+Info (10281): Verilog HDL Declaration information at getcolor.v(9): object "HEX0" differs only in case from object "hex0" in the same scope File: D:/data/Homework/FPGA/Exp/Exp11/ASCII_INPUT/getcolor.v Line: 9
+Info (10281): Verilog HDL Declaration information at getcolor.v(9): object "HEX1" differs only in case from object "hex1" in the same scope File: D:/data/Homework/FPGA/Exp/Exp11/ASCII_INPUT/getcolor.v Line: 9
+Info (10281): Verilog HDL Declaration information at getcolor.v(9): object "HEX2" differs only in case from object "hex2" in the same scope File: D:/data/Homework/FPGA/Exp/Exp11/ASCII_INPUT/getcolor.v Line: 9
+Info (10281): Verilog HDL Declaration information at getcolor.v(9): object "HEX3" differs only in case from object "hex3" in the same scope File: D:/data/Homework/FPGA/Exp/Exp11/ASCII_INPUT/getcolor.v Line: 9
+Info (10281): Verilog HDL Declaration information at getcolor.v(9): object "HEX4" differs only in case from object "hex4" in the same scope File: D:/data/Homework/FPGA/Exp/Exp11/ASCII_INPUT/getcolor.v Line: 9
+Info (10281): Verilog HDL Declaration information at getcolor.v(9): object "HEX5" differs only in case from object "hex5" in the same scope File: D:/data/Homework/FPGA/Exp/Exp11/ASCII_INPUT/getcolor.v Line: 9
+Warning (10268): Verilog HDL information at ps2_keyboard.v(30): always construct contains both blocking and non-blocking assignments File: D:/data/Homework/FPGA/Exp/Exp11/ASCII_INPUT/ps2_keyboard.v Line: 30

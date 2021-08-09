@@ -1,0 +1,11 @@
+
+State Machine - |keyboardTop|display:d1|state
+Name state.allstates state.ctrlcaps state.shiftcaps state.shiftctrl state.nostate state.capsready state.ctrlready state.shiftready 
+state.shiftready 0 0 0 0 0 0 0 0 
+state.ctrlready 0 0 0 0 0 0 1 1 
+state.capsready 0 0 0 0 0 1 0 1 
+state.nostate 0 0 0 0 1 0 0 1 
+state.shiftctrl 0 0 0 1 0 0 0 1 
+state.shiftcaps 0 0 1 0 0 0 0 1 
+state.ctrlcaps 0 1 0 0 0 0 0 1 
+state.allstates 1 0 0 0 0 0 0 1 

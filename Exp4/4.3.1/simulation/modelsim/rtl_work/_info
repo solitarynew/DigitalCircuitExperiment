@@ -1,0 +1,100 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/data/Homework/FPGA/Exp/Exp4/4.3.1/simulation/modelsim
+vBlock
+Z1 !s110 1602044744
+!i10b 1
+!s100 8EcDKQne1mIgH=Q;]I_<S3
+I21hEannDAJ6nh5I1;YF`c0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1601273830
+8D:/data/Homework/FPGA/Exp/Exp4/4.3.1/Block.v
+FD:/data/Homework/FPGA/Exp/Exp4/4.3.1/Block.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1602044744.000000
+!s107 D:/data/Homework/FPGA/Exp/Exp4/4.3.1/Block.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp4/4.3.1|D:/data/Homework/FPGA/Exp/Exp4/4.3.1/Block.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp4/4.3.1
+Z7 tCvgOpt 0
+n@block
+vtrigger
+R1
+!i10b 1
+!s100 kJ9P>i2TF0WS;=0O0JgCE2
+I90iM?_=cVW01>gaN;L[WS0
+R2
+R0
+w1601273515
+8D:/data/Homework/FPGA/Exp/Exp4/4.3.1/trigger.v
+FD:/data/Homework/FPGA/Exp/Exp4/4.3.1/trigger.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/data/Homework/FPGA/Exp/Exp4/4.3.1/trigger.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp4/4.3.1|D:/data/Homework/FPGA/Exp/Exp4/4.3.1/trigger.v|
+!i113 1
+R5
+R6
+R7
+vtrigger_vlg_tst
+!s110 1602044745
+!i10b 1
+!s100 fCUTdFoAj94QOfz?z0gba1
+I8f@Q:99^<7P5YWkEOR9G11
+R2
+R0
+w1601274072
+8D:/data/Homework/FPGA/Exp/Exp4/4.3.1/simulation/modelsim/trigger.vt
+FD:/data/Homework/FPGA/Exp/Exp4/4.3.1/simulation/modelsim/trigger.vt
+L0 28
+R3
+r1
+!s85 0
+31
+!s108 1602044745.000000
+!s107 D:/data/Homework/FPGA/Exp/Exp4/4.3.1/simulation/modelsim/trigger.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp4/4.3.1/simulation/modelsim|D:/data/Homework/FPGA/Exp/Exp4/4.3.1/simulation/modelsim/trigger.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp4/4.3.1/simulation/modelsim
+R7
+vUnblock
+R1
+!i10b 1
+!s100 G^]aPoD>=z>`Gd2[7lLSe3
+I3S]31Bao87Gg9:I[zb2I82
+R2
+R0
+w1601273864
+8D:/data/Homework/FPGA/Exp/Exp4/4.3.1/Unblock.v
+FD:/data/Homework/FPGA/Exp/Exp4/4.3.1/Unblock.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/data/Homework/FPGA/Exp/Exp4/4.3.1/Unblock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp4/4.3.1|D:/data/Homework/FPGA/Exp/Exp4/4.3.1/Unblock.v|
+!i113 1
+R5
+R6
+R7
+n@unblock

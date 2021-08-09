@@ -1,0 +1,46 @@
+module ALU(A,B,Op,Result,Carry,Overflow);
+	input [3:0] A,B;
+	input [2:0] Op;
+	output reg [3:0] Result;
+	output reg Carry,Overflow;
+	
+	always @(*)
+	begin
+		case(Op)
+			3'b000:begin
+				assign {Carry,Result}=A+B;
+				assign Overflow=(A[3]==B[3])&&(Result[3]!=A[3]);
+				end
+			3'b001:begin
+				assign t_no_Cin={n{Op[0]}}^B;
+				assign {Carry,Result}=A+t_no_Cin+Op[0];
+				assign Overflow=(A[n-1]==t_no_Cin[3])&&(Result[3]!=A[3]);
+				end
+			3'b010:begin
+				assign Result=~A;
+				Carry=0;
+				Overflow=0;
+				end
+			3'b011:begin
+				assign Result=A&B;
+				Carry=0;
+				Overflow=0;
+				end
+			3'b100:begin
+				assign Result=A|B;
+				Carry=0;
+				Overflow=0;
+				end			
+			3'b101:begin
+				assign Result=A^B;
+				Carry=0;
+				Overflow=0;
+				end
+			3'b110:begin
+				if()
+			
+				end
+		endcase
+	end
+	
+endmodule

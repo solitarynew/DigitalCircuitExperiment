@@ -1,0 +1,1320 @@
+Analysis & Elaboration report for Type
+Mon Dec 28 12:38:25 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration IP Cores Summary
+  5. Source assignments for memory:ctrl_memory|video_ram:vram|altsyncram:altsyncram_component|altsyncram_0fr2:auto_generated
+  6. Source assignments for memory:ctrl_memory|font_rom:from|altsyncram:altsyncram_component|altsyncram_qfi1:auto_generated
+  7. Source assignments for memory:ctrl_memory|begin_rom:brom|altsyncram:altsyncram_component|altsyncram_g3i1:auto_generated
+  8. Parameter Settings for User Entity Instance: clkgen:my_vgaclk
+  9. Parameter Settings for User Entity Instance: vga_ctrl:my_ctrl
+ 10. Parameter Settings for User Entity Instance: memory:ctrl_memory|video_ram:vram|altsyncram:altsyncram_component
+ 11. Parameter Settings for User Entity Instance: memory:ctrl_memory|font_rom:from|altsyncram:altsyncram_component
+ 12. Parameter Settings for User Entity Instance: memory:ctrl_memory|begin_rom:brom|altsyncram:altsyncram_component
+ 13. Parameter Settings for User Entity Instance: memory:ctrl_memory|clkgen:gen_clk2
+ 14. Parameter Settings for User Entity Instance: memory:ctrl_memory|clkgen:gen_randomclk
+ 15. Parameter Settings for User Entity Instance: memory:ctrl_memory|Random:gen_randchar
+ 16. Parameter Settings for User Entity Instance: memory:ctrl_memory|Random:gen_randloc
+ 17. Parameter Settings for User Entity Instance: memory:ctrl_memory|Random:gen_randcolor
+ 18. Parameter Settings for User Entity Instance: memory:ctrl_memory|clkgen:gen_gclk
+ 19. Parameter Settings for User Entity Instance: clkgen:my_i2c_clk
+ 20. Parameter Settings for User Entity Instance: audio_clk:u1|audio_clk_0002:audio_clk_inst|altera_pll:altera_pll_i
+ 21. Parameter Settings for User Entity Instance: I2C_Audio_Config:myconfig
+ 22. Parameter Settings for User Entity Instance: bgm:bm|clkgen:my_i2c_clk
+ 23. altsyncram Parameter Settings by Entity Instance
+ 24. Analysis & Elaboration Settings
+ 25. Port Connectivity Checks: "decode_hex:h5"
+ 26. Port Connectivity Checks: "bgm:bm|clkgen:my_i2c_clk"
+ 27. Port Connectivity Checks: "bgm:bm"
+ 28. Port Connectivity Checks: "I2C_Audio_Config:myconfig|I2C_Controller:u0"
+ 29. Port Connectivity Checks: "I2C_Audio_Config:myconfig"
+ 30. Port Connectivity Checks: "audio_clk:u1"
+ 31. Port Connectivity Checks: "clkgen:my_i2c_clk"
+ 32. Port Connectivity Checks: "memory:ctrl_memory|clkgen:gen_gclk"
+ 33. Port Connectivity Checks: "memory:ctrl_memory|Random:gen_randcolor"
+ 34. Port Connectivity Checks: "memory:ctrl_memory|Random:gen_randloc"
+ 35. Port Connectivity Checks: "memory:ctrl_memory|Random:gen_randchar"
+ 36. Port Connectivity Checks: "memory:ctrl_memory|clkgen:gen_randomclk"
+ 37. Port Connectivity Checks: "memory:ctrl_memory|clkgen:gen_clk2"
+ 38. Port Connectivity Checks: "memory:ctrl_memory|video_ram:vram"
+ 39. Port Connectivity Checks: "keyboard:k|ps2_keyboard:k1"
+ 40. Port Connectivity Checks: "keyboard:k"
+ 41. Port Connectivity Checks: "vga_ctrl:my_ctrl"
+ 42. Port Connectivity Checks: "clkgen:my_vgaclk"
+ 43. Analysis & Elaboration Messages
+ 44. Analysis & Elaboration Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Mon Dec 28 12:38:25 2020       ;
+; Quartus Prime Version         ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                 ; Type                                        ;
+; Top-level Entity Name         ; Type                                        ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration IP Cores Summary                                                                                      ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------+--------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                         ; IP Include File    ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------+--------------------+
+; Altera ; ROM: 1-PORT  ; 17.1    ; N/A          ; N/A          ; |Type|memory:ctrl_memory|begin_rom:brom ; memory/begin_rom.v ;
+; Altera ; ROM: 1-PORT  ; 17.1    ; N/A          ; N/A          ; |Type|memory:ctrl_memory|font_rom:from  ; memory/font_rom.v  ;
+; Altera ; RAM: 2-PORT  ; 17.1    ; N/A          ; N/A          ; |Type|memory:ctrl_memory|video_ram:vram ; memory/video_ram.v ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for memory:ctrl_memory|video_ram:vram|altsyncram:altsyncram_component|altsyncram_0fr2:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                        ;
++---------------------------------+--------------------+------+-----------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                         ;
++---------------------------------+--------------------+------+-----------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for memory:ctrl_memory|font_rom:from|altsyncram:altsyncram_component|altsyncram_qfi1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                       ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                        ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for memory:ctrl_memory|begin_rom:brom|altsyncram:altsyncram_component|altsyncram_g3i1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                        ;
++---------------------------------+--------------------+------+-----------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                         ;
++---------------------------------+--------------------+------+-----------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clkgen:my_vgaclk ;
++----------------+----------+-----------------------------------+
+; Parameter Name ; Value    ; Type                              ;
++----------------+----------+-----------------------------------+
+; clk_freq       ; 25000000 ; Signed Integer                    ;
+; countlimit     ; 1        ; Signed Integer                    ;
++----------------+----------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga_ctrl:my_ctrl ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; h_frontporch   ; 96    ; Signed Integer                       ;
+; h_active       ; 144   ; Signed Integer                       ;
+; h_backporch    ; 784   ; Signed Integer                       ;
+; h_total        ; 800   ; Signed Integer                       ;
+; v_frontporch   ; 2     ; Signed Integer                       ;
+; v_active       ; 35    ; Signed Integer                       ;
+; v_backporch    ; 515   ; Signed Integer                       ;
+; v_total        ; 525   ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:ctrl_memory|video_ram:vram|altsyncram:altsyncram_component ;
++------------------------------------+------------------------+--------------------------------------------------+
+; Parameter Name                     ; Value                  ; Type                                             ;
++------------------------------------+------------------------+--------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                      ; Untyped                                          ;
+; AUTO_CARRY_CHAINS                  ; ON                     ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                    ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS                ; ON                     ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                    ; IGNORE_CASCADE                                   ;
+; WIDTH_BYTEENA                      ; 1                      ; Untyped                                          ;
+; OPERATION_MODE                     ; BIDIR_DUAL_PORT        ; Untyped                                          ;
+; WIDTH_A                            ; 11                     ; Signed Integer                                   ;
+; WIDTHAD_A                          ; 12                     ; Signed Integer                                   ;
+; NUMWORDS_A                         ; 2100                   ; Signed Integer                                   ;
+; OUTDATA_REG_A                      ; CLOCK0                 ; Untyped                                          ;
+; ADDRESS_ACLR_A                     ; NONE                   ; Untyped                                          ;
+; OUTDATA_ACLR_A                     ; NONE                   ; Untyped                                          ;
+; WRCONTROL_ACLR_A                   ; NONE                   ; Untyped                                          ;
+; INDATA_ACLR_A                      ; NONE                   ; Untyped                                          ;
+; BYTEENA_ACLR_A                     ; NONE                   ; Untyped                                          ;
+; WIDTH_B                            ; 11                     ; Signed Integer                                   ;
+; WIDTHAD_B                          ; 12                     ; Signed Integer                                   ;
+; NUMWORDS_B                         ; 2100                   ; Signed Integer                                   ;
+; INDATA_REG_B                       ; CLOCK0                 ; Untyped                                          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK0                 ; Untyped                                          ;
+; RDCONTROL_REG_B                    ; CLOCK1                 ; Untyped                                          ;
+; ADDRESS_REG_B                      ; CLOCK0                 ; Untyped                                          ;
+; OUTDATA_REG_B                      ; CLOCK0                 ; Untyped                                          ;
+; BYTEENA_REG_B                      ; CLOCK1                 ; Untyped                                          ;
+; INDATA_ACLR_B                      ; NONE                   ; Untyped                                          ;
+; WRCONTROL_ACLR_B                   ; NONE                   ; Untyped                                          ;
+; ADDRESS_ACLR_B                     ; NONE                   ; Untyped                                          ;
+; OUTDATA_ACLR_B                     ; NONE                   ; Untyped                                          ;
+; RDCONTROL_ACLR_B                   ; NONE                   ; Untyped                                          ;
+; BYTEENA_ACLR_B                     ; NONE                   ; Untyped                                          ;
+; WIDTH_BYTEENA_A                    ; 1                      ; Signed Integer                                   ;
+; WIDTH_BYTEENA_B                    ; 1                      ; Signed Integer                                   ;
+; RAM_BLOCK_TYPE                     ; M10K                   ; Untyped                                          ;
+; BYTE_SIZE                          ; 8                      ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE              ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ   ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ   ; Untyped                                          ;
+; INIT_FILE                          ; ./memory/video_ram.mif ; Untyped                                          ;
+; INIT_FILE_LAYOUT                   ; PORT_A                 ; Untyped                                          ;
+; MAXIMUM_DEPTH                      ; 0                      ; Untyped                                          ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                 ; Untyped                                          ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS                 ; Untyped                                          ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                 ; Untyped                                          ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS                 ; Untyped                                          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN        ; Untyped                                          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN        ; Untyped                                          ;
+; ENABLE_ECC                         ; FALSE                  ; Untyped                                          ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                  ; Untyped                                          ;
+; WIDTH_ECCSTATUS                    ; 3                      ; Untyped                                          ;
+; DEVICE_FAMILY                      ; Cyclone V              ; Untyped                                          ;
+; CBXI_PARAMETER                     ; altsyncram_0fr2        ; Untyped                                          ;
++------------------------------------+------------------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:ctrl_memory|font_rom:from|altsyncram:altsyncram_component ;
++------------------------------------+-----------------------+--------------------------------------------------+
+; Parameter Name                     ; Value                 ; Type                                             ;
++------------------------------------+-----------------------+--------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                     ; Untyped                                          ;
+; AUTO_CARRY_CHAINS                  ; ON                    ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                   ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS                ; ON                    ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                   ; IGNORE_CASCADE                                   ;
+; WIDTH_BYTEENA                      ; 1                     ; Untyped                                          ;
+; OPERATION_MODE                     ; ROM                   ; Untyped                                          ;
+; WIDTH_A                            ; 12                    ; Signed Integer                                   ;
+; WIDTHAD_A                          ; 12                    ; Signed Integer                                   ;
+; NUMWORDS_A                         ; 4096                  ; Signed Integer                                   ;
+; OUTDATA_REG_A                      ; CLOCK0                ; Untyped                                          ;
+; ADDRESS_ACLR_A                     ; NONE                  ; Untyped                                          ;
+; OUTDATA_ACLR_A                     ; NONE                  ; Untyped                                          ;
+; WRCONTROL_ACLR_A                   ; NONE                  ; Untyped                                          ;
+; INDATA_ACLR_A                      ; NONE                  ; Untyped                                          ;
+; BYTEENA_ACLR_A                     ; NONE                  ; Untyped                                          ;
+; WIDTH_B                            ; 1                     ; Untyped                                          ;
+; WIDTHAD_B                          ; 1                     ; Untyped                                          ;
+; NUMWORDS_B                         ; 1                     ; Untyped                                          ;
+; INDATA_REG_B                       ; CLOCK1                ; Untyped                                          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                ; Untyped                                          ;
+; RDCONTROL_REG_B                    ; CLOCK1                ; Untyped                                          ;
+; ADDRESS_REG_B                      ; CLOCK1                ; Untyped                                          ;
+; OUTDATA_REG_B                      ; UNREGISTERED          ; Untyped                                          ;
+; BYTEENA_REG_B                      ; CLOCK1                ; Untyped                                          ;
+; INDATA_ACLR_B                      ; NONE                  ; Untyped                                          ;
+; WRCONTROL_ACLR_B                   ; NONE                  ; Untyped                                          ;
+; ADDRESS_ACLR_B                     ; NONE                  ; Untyped                                          ;
+; OUTDATA_ACLR_B                     ; NONE                  ; Untyped                                          ;
+; RDCONTROL_ACLR_B                   ; NONE                  ; Untyped                                          ;
+; BYTEENA_ACLR_B                     ; NONE                  ; Untyped                                          ;
+; WIDTH_BYTEENA_A                    ; 1                     ; Signed Integer                                   ;
+; WIDTH_BYTEENA_B                    ; 1                     ; Untyped                                          ;
+; RAM_BLOCK_TYPE                     ; M10K                  ; Untyped                                          ;
+; BYTE_SIZE                          ; 8                     ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE             ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ  ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ  ; Untyped                                          ;
+; INIT_FILE                          ; ./memory/vga_font.mif ; Untyped                                          ;
+; INIT_FILE_LAYOUT                   ; PORT_A                ; Untyped                                          ;
+; MAXIMUM_DEPTH                      ; 0                     ; Untyped                                          ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                ; Untyped                                          ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                ; Untyped                                          ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                ; Untyped                                          ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                ; Untyped                                          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN       ; Untyped                                          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN       ; Untyped                                          ;
+; ENABLE_ECC                         ; FALSE                 ; Untyped                                          ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                 ; Untyped                                          ;
+; WIDTH_ECCSTATUS                    ; 3                     ; Untyped                                          ;
+; DEVICE_FAMILY                      ; Cyclone V             ; Untyped                                          ;
+; CBXI_PARAMETER                     ; altsyncram_qfi1       ; Untyped                                          ;
++------------------------------------+-----------------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:ctrl_memory|begin_rom:brom|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+----------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                               ;
++------------------------------------+----------------------+----------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                            ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                     ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                            ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                            ;
+; WIDTH_A                            ; 8                    ; Signed Integer                                     ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer                                     ;
+; NUMWORDS_A                         ; 2100                 ; Signed Integer                                     ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                            ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                            ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                            ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                            ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                            ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                            ;
+; WIDTH_B                            ; 1                    ; Untyped                                            ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                            ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                            ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                            ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                            ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                            ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                            ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                            ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                            ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                            ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                            ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                            ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                            ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                            ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                            ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                     ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                            ;
+; RAM_BLOCK_TYPE                     ; M10K                 ; Untyped                                            ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                            ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                            ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                            ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                            ;
+; INIT_FILE                          ; ./memory/begin.mif   ; Untyped                                            ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                            ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                            ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                            ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                            ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                            ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                            ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                            ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                            ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                            ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                            ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                            ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                            ;
+; CBXI_PARAMETER                     ; altsyncram_g3i1      ; Untyped                                            ;
++------------------------------------+----------------------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:ctrl_memory|clkgen:gen_clk2 ;
++----------------+---------+------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                 ;
++----------------+---------+------------------------------------------------------+
+; clk_freq       ; 3125000 ; Signed Integer                                       ;
+; countlimit     ; 8       ; Signed Integer                                       ;
++----------------+---------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:ctrl_memory|clkgen:gen_randomclk ;
++----------------+---------+-----------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                      ;
++----------------+---------+-----------------------------------------------------------+
+; clk_freq       ; 4       ; Signed Integer                                            ;
+; countlimit     ; 6250000 ; Signed Integer                                            ;
++----------------+---------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:ctrl_memory|Random:gen_randchar ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; seed           ; 200   ; Signed Integer                                             ;
+; min            ; 65    ; Signed Integer                                             ;
+; max            ; 90    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:ctrl_memory|Random:gen_randloc ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; seed           ; 100   ; Signed Integer                                            ;
+; min            ; 72    ; Signed Integer                                            ;
+; max            ; 137   ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:ctrl_memory|Random:gen_randcolor ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; seed           ; 50    ; Signed Integer                                              ;
+; min            ; 1     ; Signed Integer                                              ;
+; max            ; 3     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:ctrl_memory|clkgen:gen_gclk ;
++----------------+----------+-----------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                ;
++----------------+----------+-----------------------------------------------------+
+; clk_freq       ; 25000000 ; Signed Integer                                      ;
+; countlimit     ; 1        ; Signed Integer                                      ;
++----------------+----------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clkgen:my_i2c_clk ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; clk_freq       ; 10000 ; Signed Integer                        ;
+; countlimit     ; 2500  ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: audio_clk:u1|audio_clk_0002:audio_clk_inst|altera_pll:altera_pll_i ;
++--------------------------------------+------------------------+-------------------------------------------------+
+; Parameter Name                       ; Value                  ; Type                                            ;
++--------------------------------------+------------------------+-------------------------------------------------+
+; reference_clock_frequency            ; 50.0 MHz               ; String                                          ;
+; fractional_vco_multiplier            ; true                   ; String                                          ;
+; pll_type                             ; General                ; String                                          ;
+; pll_subtype                          ; General                ; String                                          ;
+; number_of_clocks                     ; 1                      ; Signed Integer                                  ;
+; operation_mode                       ; direct                 ; String                                          ;
+; deserialization_factor               ; 4                      ; Signed Integer                                  ;
+; data_rate                            ; 0                      ; Signed Integer                                  ;
+; sim_additional_refclk_cycles_to_lock ; 0                      ; Signed Integer                                  ;
+; output_clock_frequency0              ; 18.432000 MHz          ; String                                          ;
+; phase_shift0                         ; 0 ps                   ; String                                          ;
+; duty_cycle0                          ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency1              ; 0 MHz                  ; String                                          ;
+; phase_shift1                         ; 0 ps                   ; String                                          ;
+; duty_cycle1                          ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency2              ; 0 MHz                  ; String                                          ;
+; phase_shift2                         ; 0 ps                   ; String                                          ;
+; duty_cycle2                          ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency3              ; 0 MHz                  ; String                                          ;
+; phase_shift3                         ; 0 ps                   ; String                                          ;
+; duty_cycle3                          ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency4              ; 0 MHz                  ; String                                          ;
+; phase_shift4                         ; 0 ps                   ; String                                          ;
+; duty_cycle4                          ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency5              ; 0 MHz                  ; String                                          ;
+; phase_shift5                         ; 0 ps                   ; String                                          ;
+; duty_cycle5                          ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency6              ; 0 MHz                  ; String                                          ;
+; phase_shift6                         ; 0 ps                   ; String                                          ;
+; duty_cycle6                          ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency7              ; 0 MHz                  ; String                                          ;
+; phase_shift7                         ; 0 ps                   ; String                                          ;
+; duty_cycle7                          ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency8              ; 0 MHz                  ; String                                          ;
+; phase_shift8                         ; 0 ps                   ; String                                          ;
+; duty_cycle8                          ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency9              ; 0 MHz                  ; String                                          ;
+; phase_shift9                         ; 0 ps                   ; String                                          ;
+; duty_cycle9                          ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency10             ; 0 MHz                  ; String                                          ;
+; phase_shift10                        ; 0 ps                   ; String                                          ;
+; duty_cycle10                         ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency11             ; 0 MHz                  ; String                                          ;
+; phase_shift11                        ; 0 ps                   ; String                                          ;
+; duty_cycle11                         ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency12             ; 0 MHz                  ; String                                          ;
+; phase_shift12                        ; 0 ps                   ; String                                          ;
+; duty_cycle12                         ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency13             ; 0 MHz                  ; String                                          ;
+; phase_shift13                        ; 0 ps                   ; String                                          ;
+; duty_cycle13                         ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency14             ; 0 MHz                  ; String                                          ;
+; phase_shift14                        ; 0 ps                   ; String                                          ;
+; duty_cycle14                         ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency15             ; 0 MHz                  ; String                                          ;
+; phase_shift15                        ; 0 ps                   ; String                                          ;
+; duty_cycle15                         ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency16             ; 0 MHz                  ; String                                          ;
+; phase_shift16                        ; 0 ps                   ; String                                          ;
+; duty_cycle16                         ; 50                     ; Signed Integer                                  ;
+; output_clock_frequency17             ; 0 MHz                  ; String                                          ;
+; phase_shift17                        ; 0 ps                   ; String                                          ;
+; duty_cycle17                         ; 50                     ; Signed Integer                                  ;
+; clock_name_0                         ;                        ; String                                          ;
+; clock_name_1                         ;                        ; String                                          ;
+; clock_name_2                         ;                        ; String                                          ;
+; clock_name_3                         ;                        ; String                                          ;
+; clock_name_4                         ;                        ; String                                          ;
+; clock_name_5                         ;                        ; String                                          ;
+; clock_name_6                         ;                        ; String                                          ;
+; clock_name_7                         ;                        ; String                                          ;
+; clock_name_8                         ;                        ; String                                          ;
+; clock_name_global_0                  ; false                  ; String                                          ;
+; clock_name_global_1                  ; false                  ; String                                          ;
+; clock_name_global_2                  ; false                  ; String                                          ;
+; clock_name_global_3                  ; false                  ; String                                          ;
+; clock_name_global_4                  ; false                  ; String                                          ;
+; clock_name_global_5                  ; false                  ; String                                          ;
+; clock_name_global_6                  ; false                  ; String                                          ;
+; clock_name_global_7                  ; false                  ; String                                          ;
+; clock_name_global_8                  ; false                  ; String                                          ;
+; m_cnt_hi_div                         ; 1                      ; Signed Integer                                  ;
+; m_cnt_lo_div                         ; 1                      ; Signed Integer                                  ;
+; m_cnt_bypass_en                      ; false                  ; String                                          ;
+; m_cnt_odd_div_duty_en                ; false                  ; String                                          ;
+; n_cnt_hi_div                         ; 1                      ; Signed Integer                                  ;
+; n_cnt_lo_div                         ; 1                      ; Signed Integer                                  ;
+; n_cnt_bypass_en                      ; false                  ; String                                          ;
+; n_cnt_odd_div_duty_en                ; false                  ; String                                          ;
+; c_cnt_hi_div0                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div0                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en0                     ; false                  ; String                                          ;
+; c_cnt_in_src0                        ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en0               ; false                  ; String                                          ;
+; c_cnt_prst0                          ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst0                   ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div1                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div1                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en1                     ; false                  ; String                                          ;
+; c_cnt_in_src1                        ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en1               ; false                  ; String                                          ;
+; c_cnt_prst1                          ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst1                   ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div2                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div2                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en2                     ; false                  ; String                                          ;
+; c_cnt_in_src2                        ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en2               ; false                  ; String                                          ;
+; c_cnt_prst2                          ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst2                   ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div3                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div3                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en3                     ; false                  ; String                                          ;
+; c_cnt_in_src3                        ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en3               ; false                  ; String                                          ;
+; c_cnt_prst3                          ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst3                   ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div4                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div4                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en4                     ; false                  ; String                                          ;
+; c_cnt_in_src4                        ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en4               ; false                  ; String                                          ;
+; c_cnt_prst4                          ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst4                   ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div5                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div5                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en5                     ; false                  ; String                                          ;
+; c_cnt_in_src5                        ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en5               ; false                  ; String                                          ;
+; c_cnt_prst5                          ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst5                   ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div6                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div6                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en6                     ; false                  ; String                                          ;
+; c_cnt_in_src6                        ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en6               ; false                  ; String                                          ;
+; c_cnt_prst6                          ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst6                   ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div7                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div7                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en7                     ; false                  ; String                                          ;
+; c_cnt_in_src7                        ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en7               ; false                  ; String                                          ;
+; c_cnt_prst7                          ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst7                   ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div8                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div8                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en8                     ; false                  ; String                                          ;
+; c_cnt_in_src8                        ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en8               ; false                  ; String                                          ;
+; c_cnt_prst8                          ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst8                   ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div9                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div9                        ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en9                     ; false                  ; String                                          ;
+; c_cnt_in_src9                        ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en9               ; false                  ; String                                          ;
+; c_cnt_prst9                          ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst9                   ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div10                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div10                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en10                    ; false                  ; String                                          ;
+; c_cnt_in_src10                       ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en10              ; false                  ; String                                          ;
+; c_cnt_prst10                         ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst10                  ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div11                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div11                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en11                    ; false                  ; String                                          ;
+; c_cnt_in_src11                       ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en11              ; false                  ; String                                          ;
+; c_cnt_prst11                         ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst11                  ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div12                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div12                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en12                    ; false                  ; String                                          ;
+; c_cnt_in_src12                       ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en12              ; false                  ; String                                          ;
+; c_cnt_prst12                         ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst12                  ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div13                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div13                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en13                    ; false                  ; String                                          ;
+; c_cnt_in_src13                       ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en13              ; false                  ; String                                          ;
+; c_cnt_prst13                         ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst13                  ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div14                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div14                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en14                    ; false                  ; String                                          ;
+; c_cnt_in_src14                       ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en14              ; false                  ; String                                          ;
+; c_cnt_prst14                         ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst14                  ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div15                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div15                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en15                    ; false                  ; String                                          ;
+; c_cnt_in_src15                       ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en15              ; false                  ; String                                          ;
+; c_cnt_prst15                         ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst15                  ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div16                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div16                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en16                    ; false                  ; String                                          ;
+; c_cnt_in_src16                       ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en16              ; false                  ; String                                          ;
+; c_cnt_prst16                         ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst16                  ; 0                      ; Signed Integer                                  ;
+; c_cnt_hi_div17                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_lo_div17                       ; 1                      ; Signed Integer                                  ;
+; c_cnt_bypass_en17                    ; false                  ; String                                          ;
+; c_cnt_in_src17                       ; ph_mux_clk             ; String                                          ;
+; c_cnt_odd_div_duty_en17              ; false                  ; String                                          ;
+; c_cnt_prst17                         ; 1                      ; Signed Integer                                  ;
+; c_cnt_ph_mux_prst17                  ; 0                      ; Signed Integer                                  ;
+; pll_vco_div                          ; 1                      ; Signed Integer                                  ;
+; pll_slf_rst                          ; false                  ; String                                          ;
+; pll_bw_sel                           ; low                    ; String                                          ;
+; pll_output_clk_frequency             ; 0 MHz                  ; String                                          ;
+; pll_cp_current                       ; 0                      ; Signed Integer                                  ;
+; pll_bwctrl                           ; 0                      ; Signed Integer                                  ;
+; pll_fractional_division              ; 1                      ; Signed Integer                                  ;
+; pll_fractional_cout                  ; 24                     ; Signed Integer                                  ;
+; pll_dsm_out_sel                      ; 1st_order              ; String                                          ;
+; mimic_fbclk_type                     ; gclk                   ; String                                          ;
+; pll_fbclk_mux_1                      ; glb                    ; String                                          ;
+; pll_fbclk_mux_2                      ; fb_1                   ; String                                          ;
+; pll_m_cnt_in_src                     ; ph_mux_clk             ; String                                          ;
+; pll_vcoph_div                        ; 1                      ; Signed Integer                                  ;
+; refclk1_frequency                    ; 0 MHz                  ; String                                          ;
+; pll_clkin_0_src                      ; clk_0                  ; String                                          ;
+; pll_clkin_1_src                      ; clk_0                  ; String                                          ;
+; pll_clk_loss_sw_en                   ; false                  ; String                                          ;
+; pll_auto_clk_sw_en                   ; false                  ; String                                          ;
+; pll_manu_clk_sw_en                   ; false                  ; String                                          ;
+; pll_clk_sw_dly                       ; 0                      ; Signed Integer                                  ;
+; pll_extclk_0_cnt_src                 ; pll_extclk_cnt_src_vss ; String                                          ;
+; pll_extclk_1_cnt_src                 ; pll_extclk_cnt_src_vss ; String                                          ;
++--------------------------------------+------------------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: I2C_Audio_Config:myconfig ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; total_cmd      ; 9     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bgm:bm|clkgen:my_i2c_clk ;
++----------------+---------+--------------------------------------------+
+; Parameter Name ; Value   ; Type                                       ;
++----------------+---------+--------------------------------------------+
+; clk_freq       ; 4       ; Signed Integer                             ;
+; countlimit     ; 6250000 ; Signed Integer                             ;
++----------------+---------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                              ;
++-------------------------------------------+-------------------------------------------------------------------+
+; Name                                      ; Value                                                             ;
++-------------------------------------------+-------------------------------------------------------------------+
+; Number of entity instances                ; 3                                                                 ;
+; Entity Instance                           ; memory:ctrl_memory|video_ram:vram|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; BIDIR_DUAL_PORT                                                   ;
+;     -- WIDTH_A                            ; 11                                                                ;
+;     -- NUMWORDS_A                         ; 2100                                                              ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                            ;
+;     -- WIDTH_B                            ; 11                                                                ;
+;     -- NUMWORDS_B                         ; 2100                                                              ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                            ;
+;     -- OUTDATA_REG_B                      ; CLOCK0                                                            ;
+;     -- RAM_BLOCK_TYPE                     ; M10K                                                              ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                         ;
+; Entity Instance                           ; memory:ctrl_memory|font_rom:from|altsyncram:altsyncram_component  ;
+;     -- OPERATION_MODE                     ; ROM                                                               ;
+;     -- WIDTH_A                            ; 12                                                                ;
+;     -- NUMWORDS_A                         ; 4096                                                              ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                            ;
+;     -- WIDTH_B                            ; 1                                                                 ;
+;     -- NUMWORDS_B                         ; 1                                                                 ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                            ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                      ;
+;     -- RAM_BLOCK_TYPE                     ; M10K                                                              ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                         ;
+; Entity Instance                           ; memory:ctrl_memory|begin_rom:brom|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                               ;
+;     -- WIDTH_A                            ; 8                                                                 ;
+;     -- NUMWORDS_A                         ; 2100                                                              ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                            ;
+;     -- WIDTH_B                            ; 1                                                                 ;
+;     -- NUMWORDS_B                         ; 1                                                                 ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                            ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                      ;
+;     -- RAM_BLOCK_TYPE                     ; M10K                                                              ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                         ;
++-------------------------------------------+-------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; Type               ; Type               ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "decode_hex:h5" ;
++-------+-------+----------+----------------+
+; Port  ; Type  ; Severity ; Details        ;
++-------+-------+----------+----------------+
+; in[3] ; Input ; Info     ; Stuck at GND   ;
++-------+-------+----------+----------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "bgm:bm|clkgen:my_i2c_clk" ;
++-------+-------+----------+---------------------------+
+; Port  ; Type  ; Severity ; Details                   ;
++-------+-------+----------+---------------------------+
+; rst   ; Input ; Info     ; Stuck at GND              ;
+; clken ; Input ; Info     ; Stuck at VCC              ;
++-------+-------+----------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bgm:bm"                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cnt  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "I2C_Audio_Config:myconfig|I2C_Controller:u0"                                                                                                 ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                      ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; ACK  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; W_R  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "I2C_Audio_Config:myconfig"                                                                                                                                                            ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                            ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; testbit ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; en      ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; en[-1]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "audio_clk:u1"                                                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; locked ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "clkgen:my_i2c_clk" ;
++-------+-------+----------+--------------------+
+; Port  ; Type  ; Severity ; Details            ;
++-------+-------+----------+--------------------+
+; clken ; Input ; Info     ; Stuck at VCC       ;
++-------+-------+----------+--------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "memory:ctrl_memory|clkgen:gen_gclk" ;
++------+-------+----------+--------------------------------------+
+; Port ; Type  ; Severity ; Details                              ;
++------+-------+----------+--------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                         ;
++------+-------+----------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "memory:ctrl_memory|Random:gen_randcolor"                                                                                      ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                    ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; rst_n   ; Input  ; Info     ; Stuck at VCC                                                                                                               ;
+; srand   ; Input  ; Info     ; Stuck at GND                                                                                                               ;
+; out_num ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (2 bits) it drives; bit(s) "out_num[7..2]" have no fanouts ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "memory:ctrl_memory|Random:gen_randloc" ;
++-------+-------+----------+----------------------------------------+
+; Port  ; Type  ; Severity ; Details                                ;
++-------+-------+----------+----------------------------------------+
+; rst_n ; Input ; Info     ; Stuck at VCC                           ;
+; srand ; Input ; Info     ; Stuck at GND                           ;
++-------+-------+----------+----------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "memory:ctrl_memory|Random:gen_randchar" ;
++-------+-------+----------+-----------------------------------------+
+; Port  ; Type  ; Severity ; Details                                 ;
++-------+-------+----------+-----------------------------------------+
+; rst_n ; Input ; Info     ; Stuck at VCC                            ;
+; srand ; Input ; Info     ; Stuck at GND                            ;
++-------+-------+----------+-----------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "memory:ctrl_memory|clkgen:gen_randomclk" ;
++-------+-------+----------+------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                  ;
++-------+-------+----------+------------------------------------------+
+; rst   ; Input ; Info     ; Stuck at GND                             ;
+; clken ; Input ; Info     ; Stuck at VCC                             ;
++-------+-------+----------+------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "memory:ctrl_memory|clkgen:gen_clk2" ;
++-------+-------+----------+-------------------------------------+
+; Port  ; Type  ; Severity ; Details                             ;
++-------+-------+----------+-------------------------------------+
+; rst   ; Input ; Info     ; Stuck at GND                        ;
+; clken ; Input ; Info     ; Stuck at VCC                        ;
++-------+-------+----------+-------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "memory:ctrl_memory|video_ram:vram"                                                                                                             ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                      ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; wren_a ; Input  ; Info     ; Stuck at VCC                                                                                                                                 ;
+; wren_b ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; data_b ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; q_a    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard:k|ps2_keyboard:k1"                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; clrn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; clrn[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "keyboard:k" ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; en   ; Input ; Info     ; Stuck at VCC ;
++------+-------+----------+--------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "vga_ctrl:my_ctrl" ;
++-------+-------+----------+-------------------+
+; Port  ; Type  ; Severity ; Details           ;
++-------+-------+----------+-------------------+
+; reset ; Input ; Info     ; Stuck at GND      ;
++-------+-------+----------+-------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "clkgen:my_vgaclk" ;
++-------+-------+----------+-------------------+
+; Port  ; Type  ; Severity ; Details           ;
++-------+-------+----------+-------------------+
+; rst   ; Input ; Info     ; Stuck at GND      ;
+; clken ; Input ; Info     ; Stuck at VCC      ;
++-------+-------+----------+-------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Mon Dec 28 12:38:07 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Type -c Type --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file random.v
+    Info (12023): Found entity 1: Random File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/Random.v Line: 1
+Warning (12019): Can't analyze file -- file ascii_gen.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file memory/video_ram.v
+    Info (12023): Found entity 1: video_ram File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory/video_ram.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file memory/font_rom.v
+    Info (12023): Found entity 1: font_rom File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory/font_rom.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file memory/begin_rom.v
+    Info (12023): Found entity 1: begin_rom File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory/begin_rom.v Line: 39
+Warning (12125): Using design file type.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Type File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at type.v(190): created implicit net for "reset_n" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 190
+Info (12127): Elaborating entity "Type" for the top level hierarchy
+Warning (10034): Output port "LEDR[9..1]" at type.v(21) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 21
+Warning (10034): Output port "DRAM_ADDR" at type.v(32) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 32
+Warning (10034): Output port "DRAM_BA" at type.v(33) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 33
+Warning (10034): Output port "DRAM_CAS_N" at type.v(34) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 34
+Warning (10034): Output port "DRAM_CKE" at type.v(35) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 35
+Warning (10034): Output port "DRAM_CLK" at type.v(36) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 36
+Warning (10034): Output port "DRAM_CS_N" at type.v(37) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 37
+Warning (10034): Output port "DRAM_LDQM" at type.v(39) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 39
+Warning (10034): Output port "DRAM_RAS_N" at type.v(40) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 40
+Warning (10034): Output port "DRAM_UDQM" at type.v(41) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 41
+Warning (10034): Output port "DRAM_WE_N" at type.v(42) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 42
+Warning (10034): Output port "TD_RESET_N" at type.v(48) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 48
+Warning (10034): Output port "ADC_CONVST" at type.v(76) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 76
+Warning (10034): Output port "ADC_DIN" at type.v(77) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 77
+Warning (10034): Output port "ADC_SCLK" at type.v(79) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 79
+Warning (10034): Output port "IRDA_TXD" at type.v(88) has no driver File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 88
+Warning (12125): Using design file clkgen.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: clkgen File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/clkgen.v Line: 23
+Info (12128): Elaborating entity "clkgen" for hierarchy "clkgen:my_vgaclk" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 142
+Warning (12125): Using design file vga_ctrl.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: vga_ctrl File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/vga_ctrl.v Line: 1
+Info (12128): Elaborating entity "vga_ctrl" for hierarchy "vga_ctrl:my_ctrl" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 143
+Warning (12125): Using design file keyboard.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: keyboard File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/keyboard.v Line: 1
+Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:k" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 144
+Warning (12125): Using design file toascii.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: toASCII File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/toascii.v Line: 2
+Info (12128): Elaborating entity "toASCII" for hierarchy "keyboard:k|toASCII:t1" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/keyboard.v Line: 24
+Warning (10858): Verilog HDL warning at toascii.v(6): object toascii used but never assigned File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/toascii.v Line: 6
+Warning (12125): Using design file ps2_keyboard.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ps2_keyboard File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/ps2_keyboard.v Line: 1
+Info (12128): Elaborating entity "ps2_keyboard" for hierarchy "keyboard:k|ps2_keyboard:k1" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/keyboard.v Line: 29
+Warning (12125): Using design file decode_hex.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: decode_hex File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/decode_hex.v Line: 1
+Info (12128): Elaborating entity "decode_hex" for hierarchy "decode_hex:h0" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 146
+Warning (12125): Using design file memory.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: memory File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 1
+Info (12128): Elaborating entity "memory" for hierarchy "memory:ctrl_memory" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 163
+Warning (10036): Verilog HDL or VHDL warning at memory.v(126): object "cnt" assigned a value but never read File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 126
+Warning (10036): Verilog HDL or VHDL warning at memory.v(127): object "clear_last" assigned a value but never read File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 127
+Warning (10036): Verilog HDL or VHDL warning at memory.v(128): object "clear_signal" assigned a value but never read File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 128
+Warning (10036): Verilog HDL or VHDL warning at memory.v(129): object "clear_loc" assigned a value but never read File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 129
+Warning (10235): Verilog HDL Always Construct warning at memory.v(80): variable "h_addr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 80
+Warning (10235): Verilog HDL Always Construct warning at memory.v(80): variable "v_addr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 80
+Warning (10230): Verilog HDL assignment warning at memory.v(80): truncated value with size 32 to match size of target (12) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 80
+Warning (10235): Verilog HDL Always Construct warning at memory.v(81): variable "begin_en" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 81
+Warning (10235): Verilog HDL Always Construct warning at memory.v(82): variable "v_addr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 82
+Warning (10235): Verilog HDL Always Construct warning at memory.v(82): variable "v_q" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 82
+Warning (10235): Verilog HDL Always Construct warning at memory.v(84): variable "v_addr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 84
+Warning (10235): Verilog HDL Always Construct warning at memory.v(84): variable "begin_q" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 84
+Warning (10235): Verilog HDL Always Construct warning at memory.v(89): variable "font" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 89
+Warning (10235): Verilog HDL Always Construct warning at memory.v(101): variable "blank" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 101
+Warning (10235): Verilog HDL Always Construct warning at memory.v(103): variable "color" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 103
+Warning (10230): Verilog HDL assignment warning at memory.v(225): truncated value with size 32 to match size of target (12) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 225
+Warning (10230): Verilog HDL assignment warning at memory.v(239): truncated value with size 32 to match size of target (12) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 239
+Warning (10230): Verilog HDL assignment warning at memory.v(244): truncated value with size 32 to match size of target (11) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 244
+Warning (10230): Verilog HDL assignment warning at memory.v(248): truncated value with size 32 to match size of target (12) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 248
+Warning (10230): Verilog HDL assignment warning at memory.v(259): truncated value with size 32 to match size of target (11) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 259
+Warning (10230): Verilog HDL assignment warning at memory.v(271): truncated value with size 32 to match size of target (12) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 271
+Warning (10230): Verilog HDL assignment warning at memory.v(280): truncated value with size 32 to match size of target (11) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 280
+Warning (10230): Verilog HDL assignment warning at memory.v(281): truncated value with size 32 to match size of target (11) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 281
+Warning (10230): Verilog HDL assignment warning at memory.v(282): truncated value with size 32 to match size of target (11) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 282
+Warning (10230): Verilog HDL assignment warning at memory.v(283): truncated value with size 32 to match size of target (11) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 283
+Warning (10230): Verilog HDL assignment warning at memory.v(284): truncated value with size 32 to match size of target (11) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 284
+Warning (10230): Verilog HDL assignment warning at memory.v(285): truncated value with size 32 to match size of target (11) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 285
+Warning (10230): Verilog HDL assignment warning at memory.v(306): truncated value with size 32 to match size of target (12) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 306
+Warning (10230): Verilog HDL assignment warning at memory.v(420): truncated value with size 32 to match size of target (29) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 420
+Warning (10230): Verilog HDL assignment warning at memory.v(428): truncated value with size 32 to match size of target (7) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 428
+Warning (10230): Verilog HDL assignment warning at memory.v(435): truncated value with size 32 to match size of target (3) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 435
+Warning (10230): Verilog HDL assignment warning at memory.v(448): truncated value with size 32 to match size of target (9) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 448
+Warning (10230): Verilog HDL assignment warning at memory.v(454): truncated value with size 32 to match size of target (14) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 454
+Warning (10230): Verilog HDL assignment warning at memory.v(461): truncated value with size 32 to match size of target (10) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 461
+Warning (10230): Verilog HDL assignment warning at memory.v(484): truncated value with size 32 to match size of target (9) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 484
+Warning (10230): Verilog HDL assignment warning at memory.v(491): truncated value with size 32 to match size of target (14) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 491
+Warning (10230): Verilog HDL assignment warning at memory.v(492): truncated value with size 32 to match size of target (10) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 492
+Warning (10230): Verilog HDL assignment warning at memory.v(496): truncated value with size 32 to match size of target (12) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 496
+Warning (10230): Verilog HDL assignment warning at memory.v(510): truncated value with size 32 to match size of target (29) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 510
+Warning (10030): Net "rand_loc[11..8]" at memory.v(325) has no driver or initial value, using a default initial value '0' File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 325
+Info (12128): Elaborating entity "video_ram" for hierarchy "memory:ctrl_memory|video_ram:vram" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 37
+Info (12128): Elaborating entity "altsyncram" for hierarchy "memory:ctrl_memory|video_ram:vram|altsyncram:altsyncram_component" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory/video_ram.v Line: 97
+Info (12130): Elaborated megafunction instantiation "memory:ctrl_memory|video_ram:vram|altsyncram:altsyncram_component" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory/video_ram.v Line: 97
+Info (12133): Instantiated megafunction "memory:ctrl_memory|video_ram:vram|altsyncram:altsyncram_component" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory/video_ram.v Line: 97
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK0"
+    Info (12134): Parameter "init_file" = "./memory/video_ram.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "2100"
+    Info (12134): Parameter "numwords_b" = "2100"
+    Info (12134): Parameter "operation_mode" = "BIDIR_DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "outdata_reg_b" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "M10K"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "12"
+    Info (12134): Parameter "widthad_b" = "12"
+    Info (12134): Parameter "width_a" = "11"
+    Info (12134): Parameter "width_b" = "11"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0fr2.tdf
+    Info (12023): Found entity 1: altsyncram_0fr2 File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/db/altsyncram_0fr2.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_0fr2" for hierarchy "memory:ctrl_memory|video_ram:vram|altsyncram:altsyncram_component|altsyncram_0fr2:auto_generated" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "font_rom" for hierarchy "memory:ctrl_memory|font_rom:from" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 43
+Info (12128): Elaborating entity "altsyncram" for hierarchy "memory:ctrl_memory|font_rom:from|altsyncram:altsyncram_component" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory/font_rom.v Line: 81
+Info (12130): Elaborated megafunction instantiation "memory:ctrl_memory|font_rom:from|altsyncram:altsyncram_component" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory/font_rom.v Line: 81
+Info (12133): Instantiated megafunction "memory:ctrl_memory|font_rom:from|altsyncram:altsyncram_component" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory/font_rom.v Line: 81
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "./memory/vga_font.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "4096"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "ram_block_type" = "M10K"
+    Info (12134): Parameter "widthad_a" = "12"
+    Info (12134): Parameter "width_a" = "12"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_qfi1.tdf
+    Info (12023): Found entity 1: altsyncram_qfi1 File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/db/altsyncram_qfi1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_qfi1" for hierarchy "memory:ctrl_memory|font_rom:from|altsyncram:altsyncram_component|altsyncram_qfi1:auto_generated" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "begin_rom" for hierarchy "memory:ctrl_memory|begin_rom:brom" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 49
+Info (12128): Elaborating entity "altsyncram" for hierarchy "memory:ctrl_memory|begin_rom:brom|altsyncram:altsyncram_component" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory/begin_rom.v Line: 81
+Info (12130): Elaborated megafunction instantiation "memory:ctrl_memory|begin_rom:brom|altsyncram:altsyncram_component" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory/begin_rom.v Line: 81
+Info (12133): Instantiated megafunction "memory:ctrl_memory|begin_rom:brom|altsyncram:altsyncram_component" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory/begin_rom.v Line: 81
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "./memory/begin.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "2100"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "ram_block_type" = "M10K"
+    Info (12134): Parameter "widthad_a" = "12"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g3i1.tdf
+    Info (12023): Found entity 1: altsyncram_g3i1 File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/db/altsyncram_g3i1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_g3i1" for hierarchy "memory:ctrl_memory|begin_rom:brom|altsyncram:altsyncram_component|altsyncram_g3i1:auto_generated" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "clkgen" for hierarchy "memory:ctrl_memory|clkgen:gen_clk2" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 136
+Info (12128): Elaborating entity "clkgen" for hierarchy "memory:ctrl_memory|clkgen:gen_randomclk" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 376
+Info (12128): Elaborating entity "Random" for hierarchy "memory:ctrl_memory|Random:gen_randchar" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 387
+Warning (10230): Verilog HDL assignment warning at Random.v(15): truncated value with size 32 to match size of target (8) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/Random.v Line: 15
+Warning (10230): Verilog HDL assignment warning at Random.v(23): truncated value with size 32 to match size of target (8) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/Random.v Line: 23
+Warning (10230): Verilog HDL assignment warning at Random.v(28): truncated value with size 32 to match size of target (8) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/Random.v Line: 28
+Info (12128): Elaborating entity "Random" for hierarchy "memory:ctrl_memory|Random:gen_randloc" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 395
+Warning (10230): Verilog HDL assignment warning at Random.v(15): truncated value with size 32 to match size of target (8) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/Random.v Line: 15
+Warning (10230): Verilog HDL assignment warning at Random.v(23): truncated value with size 32 to match size of target (8) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/Random.v Line: 23
+Warning (10230): Verilog HDL assignment warning at Random.v(28): truncated value with size 32 to match size of target (8) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/Random.v Line: 28
+Info (12128): Elaborating entity "Random" for hierarchy "memory:ctrl_memory|Random:gen_randcolor" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 403
+Warning (10230): Verilog HDL assignment warning at Random.v(15): truncated value with size 32 to match size of target (8) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/Random.v Line: 15
+Warning (10230): Verilog HDL assignment warning at Random.v(23): truncated value with size 32 to match size of target (8) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/Random.v Line: 23
+Warning (10230): Verilog HDL assignment warning at Random.v(28): truncated value with size 32 to match size of target (8) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/Random.v Line: 28
+Info (12128): Elaborating entity "clkgen" for hierarchy "clkgen:my_i2c_clk" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 192
+Warning (12125): Using design file audio_clk.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: audio_clk File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/audio_clk.v Line: 8
+Info (12128): Elaborating entity "audio_clk" for hierarchy "audio_clk:u1" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 194
+Warning (12125): Using design file audio_clk_0002.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: audio_clk_0002 File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/audio_clk_0002.v Line: 2
+Info (12128): Elaborating entity "audio_clk_0002" for hierarchy "audio_clk:u1|audio_clk_0002:audio_clk_inst" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/audio_clk.v Line: 20
+Info (12128): Elaborating entity "altera_pll" for hierarchy "audio_clk:u1|audio_clk_0002:audio_clk_inst|altera_pll:altera_pll_i" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/audio_clk_0002.v Line: 85
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info (12130): Elaborated megafunction instantiation "audio_clk:u1|audio_clk_0002:audio_clk_inst|altera_pll:altera_pll_i" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/audio_clk_0002.v Line: 85
+Info (12133): Instantiated megafunction "audio_clk:u1|audio_clk_0002:audio_clk_inst|altera_pll:altera_pll_i" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/audio_clk_0002.v Line: 85
+    Info (12134): Parameter "fractional_vco_multiplier" = "true"
+    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "operation_mode" = "direct"
+    Info (12134): Parameter "number_of_clocks" = "1"
+    Info (12134): Parameter "output_clock_frequency0" = "18.432000 MHz"
+    Info (12134): Parameter "phase_shift0" = "0 ps"
+    Info (12134): Parameter "duty_cycle0" = "50"
+    Info (12134): Parameter "output_clock_frequency1" = "0 MHz"
+    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "duty_cycle1" = "50"
+    Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
+    Info (12134): Parameter "phase_shift2" = "0 ps"
+    Info (12134): Parameter "duty_cycle2" = "50"
+    Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
+    Info (12134): Parameter "phase_shift3" = "0 ps"
+    Info (12134): Parameter "duty_cycle3" = "50"
+    Info (12134): Parameter "output_clock_frequency4" = "0 MHz"
+    Info (12134): Parameter "phase_shift4" = "0 ps"
+    Info (12134): Parameter "duty_cycle4" = "50"
+    Info (12134): Parameter "output_clock_frequency5" = "0 MHz"
+    Info (12134): Parameter "phase_shift5" = "0 ps"
+    Info (12134): Parameter "duty_cycle5" = "50"
+    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
+    Info (12134): Parameter "phase_shift6" = "0 ps"
+    Info (12134): Parameter "duty_cycle6" = "50"
+    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
+    Info (12134): Parameter "phase_shift7" = "0 ps"
+    Info (12134): Parameter "duty_cycle7" = "50"
+    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
+    Info (12134): Parameter "phase_shift8" = "0 ps"
+    Info (12134): Parameter "duty_cycle8" = "50"
+    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
+    Info (12134): Parameter "phase_shift9" = "0 ps"
+    Info (12134): Parameter "duty_cycle9" = "50"
+    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
+    Info (12134): Parameter "phase_shift10" = "0 ps"
+    Info (12134): Parameter "duty_cycle10" = "50"
+    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
+    Info (12134): Parameter "phase_shift11" = "0 ps"
+    Info (12134): Parameter "duty_cycle11" = "50"
+    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
+    Info (12134): Parameter "phase_shift12" = "0 ps"
+    Info (12134): Parameter "duty_cycle12" = "50"
+    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
+    Info (12134): Parameter "phase_shift13" = "0 ps"
+    Info (12134): Parameter "duty_cycle13" = "50"
+    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
+    Info (12134): Parameter "phase_shift14" = "0 ps"
+    Info (12134): Parameter "duty_cycle14" = "50"
+    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
+    Info (12134): Parameter "phase_shift15" = "0 ps"
+    Info (12134): Parameter "duty_cycle15" = "50"
+    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
+    Info (12134): Parameter "phase_shift16" = "0 ps"
+    Info (12134): Parameter "duty_cycle16" = "50"
+    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
+    Info (12134): Parameter "phase_shift17" = "0 ps"
+    Info (12134): Parameter "duty_cycle17" = "50"
+    Info (12134): Parameter "pll_type" = "General"
+    Info (12134): Parameter "pll_subtype" = "General"
+Warning (12125): Using design file i2c_audio_config.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: I2C_Audio_Config File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/i2c_audio_config.v Line: 1
+Info (12128): Elaborating entity "I2C_Audio_Config" for hierarchy "I2C_Audio_Config:myconfig" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 196
+Warning (10855): Verilog HDL warning at i2c_audio_config.v(33): initial value for variable audio_reg should be constant File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/i2c_audio_config.v Line: 33
+Warning (10855): Verilog HDL warning at i2c_audio_config.v(33): initial value for variable audio_cmd should be constant File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/i2c_audio_config.v Line: 33
+Warning (10030): Net "audio_reg[15..9]" at i2c_audio_config.v(28) has no driver or initial value, using a default initial value '0' File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/i2c_audio_config.v Line: 28
+Warning (10030): Net "audio_cmd[15..9]" at i2c_audio_config.v(29) has no driver or initial value, using a default initial value '0' File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/i2c_audio_config.v Line: 29
+Warning (10238): Verilog Module Declaration warning at i2c_controller.v(55): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "I2C_Controller" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/i2c_controller.v Line: 55
+Warning (12125): Using design file i2c_controller.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: I2C_Controller File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/i2c_controller.v Line: 42
+Info (12128): Elaborating entity "I2C_Controller" for hierarchy "I2C_Audio_Config:myconfig|I2C_Controller:u0" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/i2c_audio_config.v Line: 58
+Warning (10230): Verilog HDL assignment warning at i2c_controller.v(78): truncated value with size 32 to match size of target (1) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/i2c_controller.v Line: 78
+Warning (10230): Verilog HDL assignment warning at i2c_controller.v(77): truncated value with size 32 to match size of target (1) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/i2c_controller.v Line: 77
+Warning (10230): Verilog HDL assignment warning at i2c_controller.v(89): truncated value with size 32 to match size of target (6) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/i2c_controller.v Line: 89
+Warning (12125): Using design file i2s_audio.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: I2S_Audio File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/i2s_audio.v Line: 1
+Info (12128): Elaborating entity "I2S_Audio" for hierarchy "I2S_Audio:myaudio" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 198
+Warning (12125): Using design file sin_generator.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Sin_Generator File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/sin_generator.v Line: 1
+Info (12128): Elaborating entity "Sin_Generator" for hierarchy "Sin_Generator:sin_wave" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 200
+Warning (10858): Verilog HDL warning at sin_generator.v(10): object sintable used but never assigned File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/sin_generator.v Line: 10
+Warning (12125): Using design file bgm.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: bgm File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/bgm.v Line: 1
+Info (12128): Elaborating entity "bgm" for hierarchy "bgm:bm" File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/type.v Line: 204
+Warning (10850): Verilog HDL warning at bgm.v(22): number of words (25) in memory file does not match the number of elements in the address range [0:23] File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/bgm.v Line: 22
+Warning (10230): Verilog HDL assignment warning at bgm.v(40): truncated value with size 32 to match size of target (7) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/bgm.v Line: 40
+Warning (10230): Verilog HDL assignment warning at bgm.v(45): truncated value with size 32 to match size of target (7) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/bgm.v Line: 45
+Warning (10230): Verilog HDL assignment warning at bgm.v(168): truncated value with size 32 to match size of target (8) File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/bgm.v Line: 168
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file D:/data/Homework/FPGA/Exp/Exp12/Type4.0/Type.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 98 warnings
+    Info: Peak virtual memory: 4840 megabytes
+    Info: Processing ended: Mon Dec 28 12:38:25 2020
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:40
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in D:/data/Homework/FPGA/Exp/Exp12/Type4.0/Type.map.smsg.
+
+

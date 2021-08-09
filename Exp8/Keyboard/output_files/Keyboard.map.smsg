@@ -1,0 +1,8 @@
+Warning (10268): Verilog HDL information at ascii.v(40): always construct contains both blocking and non-blocking assignments File: D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ascii.v Line: 40
+Info (10281): Verilog HDL Declaration information at ascii.v(1): object "Caps" differs only in case from object "caps" in the same scope File: D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ascii.v Line: 1
+Info (10281): Verilog HDL Declaration information at ascii.v(1): object "Shift" differs only in case from object "shift" in the same scope File: D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ascii.v Line: 1
+Info (10281): Verilog HDL Declaration information at ascii.v(1): object "Ctrl" differs only in case from object "ctrl" in the same scope File: D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ascii.v Line: 1
+Warning (10268): Verilog HDL information at ascii2.v(40): always construct contains both blocking and non-blocking assignments File: D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ascii2.v Line: 40
+Info (10281): Verilog HDL Declaration information at ascii2.v(1): object "Caps" differs only in case from object "caps" in the same scope File: D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ascii2.v Line: 1
+Info (10281): Verilog HDL Declaration information at ascii2.v(1): object "Shift" differs only in case from object "shift" in the same scope File: D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ascii2.v Line: 1
+Info (10281): Verilog HDL Declaration information at ascii2.v(1): object "Ctrl" differs only in case from object "ctrl" in the same scope File: D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ascii2.v Line: 1

@@ -1,0 +1,1 @@
+module out(kbdata,ps2_clk,data,next_data)

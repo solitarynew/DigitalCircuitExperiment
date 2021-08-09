@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Mon Nov 30 14:28:10 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : ASCII_INPUT
+Top-level Entity Name : ASCII_INPUT
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 174
+Total pins : 103
+Total virtual pins : 0
+Total block memory bits : 61,856
+Total DSP Blocks : 2
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

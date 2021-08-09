@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at ps2_keyboard.v(28): always construct contains both blocking and non-blocking assignments File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/ps2_keyboard.v Line: 28
+Warning (10268): Verilog HDL information at memory.v(62): always construct contains both blocking and non-blocking assignments File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/memory.v Line: 62
+Warning (10268): Verilog HDL information at i2c_audio_config.v(60): always construct contains both blocking and non-blocking assignments File: D:/data/Homework/FPGA/Exp/Exp12/Type4.0/i2c_audio_config.v Line: 60

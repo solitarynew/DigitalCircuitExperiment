@@ -1,0 +1,17 @@
+module mux_2bits_41(X,Y,F);
+	input [3:0] X[1:0];
+	input Y;
+	output [1:0]F;
+	
+	always @(X or Y)
+		case (Y)
+			2'b00: F=x[0];
+			2'b01: F=x[1];
+			2'b10: F=x[2];
+			2'b11: F=x[3];
+			default: F=2'b00;
+		endcase
+		
+endmodule
+			
+	

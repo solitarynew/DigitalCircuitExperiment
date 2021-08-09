@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/data/Homework/FPGA/Exp/Exp2/encode83/simulation/modelsim
+vencode83
+Z1 !s110 1600178629
+!i10b 1
+!s100 T1;fOM;O[7R:X?jad[NlU0
+IKfV^>ZMJmK<6fIlmTiQdS3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1600177769
+8D:/data/Homework/FPGA/Exp/Exp2/encode83/encode83.v
+FD:/data/Homework/FPGA/Exp/Exp2/encode83/encode83.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1600178629.000000
+!s107 D:/data/Homework/FPGA/Exp/Exp2/encode83/encode83.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp2/encode83|D:/data/Homework/FPGA/Exp/Exp2/encode83/encode83.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp2/encode83
+Z6 tCvgOpt 0
+vencode83_vlg_tst
+R1
+!i10b 1
+!s100 aQ3ob;2=<h;B5mH5<:ogi3
+I]R_fXlR2]ULP`BzVCOf3J3
+R2
+R0
+w1600067817
+8D:/data/Homework/FPGA/Exp/Exp2/encode83/simulation/modelsim/encode83.vt
+FD:/data/Homework/FPGA/Exp/Exp2/encode83/simulation/modelsim/encode83.vt
+L0 28
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/data/Homework/FPGA/Exp/Exp2/encode83/simulation/modelsim/encode83.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp2/encode83/simulation/modelsim|D:/data/Homework/FPGA/Exp/Exp2/encode83/simulation/modelsim/encode83.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp2/encode83/simulation/modelsim
+R6

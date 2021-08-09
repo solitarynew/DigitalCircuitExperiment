@@ -1,0 +1,25 @@
+module Calc(A,B,Cin,Result,Carry,Overflow,Zero);
+	input [3:0] A,B;
+	input Cin;
+	output reg [3:0] Result;
+	output reg Carry,Overflow,Zero;
+	reg [3:0] t_no_Cin;
+	
+	always @(*)
+	begin
+		case(Cin)
+		0:begin
+			{Carry,Result}=A+B;
+			Overflow=(A[3]==B[3])&&(Result[3]!=A[3]);
+			Zero=(Result==0);
+		end
+		1:begin
+			to_no_Cin={n{Cin}}^B'
+			{Carry,Result}=A+to_no_Cin+Cin;
+			Overflow=(A[3]==to_no_Cin[3])&&(Result[3]!=A[3]);
+			Zero=(Result==0);
+		end
+		
+	end
+		
+endmodule		

@@ -1,0 +1,9 @@
+module Timer(clk,str,pas,clr,clk_1s,HEX0,HEX1);
+	input clk;
+	input str,pas,clr;
+	output clk_1s;
+	output [6:0] HEX0,HEX1;
+	
+
+
+endmodule

@@ -1,0 +1,1296 @@
+Analysis & Synthesis report for my_clock
+Sat Sep 26 20:08:45 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Mod0
+ 11. Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Mod0
+ 12. Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Mod0
+ 13. Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Mod1
+ 14. Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Mod1
+ 15. Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Mod1
+ 16. Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Div1
+ 17. Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Mod2
+ 18. Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Mod3
+ 19. Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Div1
+ 20. Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Mod2
+ 21. Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Mod3
+ 22. Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Div1
+ 23. Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Mod2
+ 24. Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Mod3
+ 25. Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Div3
+ 26. Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Mod4
+ 27. Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Div3
+ 28. Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Mod4
+ 29. Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Div3
+ 30. Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Mod4
+ 31. Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Div4
+ 32. Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Div4
+ 33. Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Div4
+ 34. Port Connectivity Checks: "CL:cl"
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Sep 26 20:08:45 2020       ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                   ; my_clock                                    ;
+; Top-level Entity Name           ; my_clock                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 111                                         ;
+; Total pins                      ; 70                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; my_clock           ; my_clock           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; Timer.v                          ; yes             ; User Verilog HDL File        ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v                            ;         ;
+; CL.v                             ; yes             ; User Verilog HDL File        ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v                               ;         ;
+; my_clock.v                       ; yes             ; Auto-Found Verilog HDL File  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v                         ;         ;
+; clock.v                          ; yes             ; Auto-Found Verilog HDL File  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v                            ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc      ;         ;
+; db/lpm_divide_i3m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_i3m.tdf              ;         ;
+; db/sign_div_unsign_llh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_llh.tdf         ;         ;
+; db/alt_u_div_gve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_gve.tdf               ;         ;
+; db/lpm_divide_o3m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_o3m.tdf              ;         ;
+; db/sign_div_unsign_rlh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_rlh.tdf         ;         ;
+; db/alt_u_div_sve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_sve.tdf               ;         ;
+; db/lpm_divide_l3m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_l3m.tdf              ;         ;
+; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_olh.tdf         ;         ;
+; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_mve.tdf               ;         ;
+; db/lpm_divide_q3m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_q3m.tdf              ;         ;
+; db/sign_div_unsign_tlh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_tlh.tdf         ;         ;
+; db/alt_u_div_00f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_00f.tdf               ;         ;
+; db/lpm_divide_k3m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_k3m.tdf              ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_nlh.tdf         ;         ;
+; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_kve.tdf               ;         ;
+; db/lpm_divide_ibm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_ibm.tdf              ;         ;
+; db/lpm_divide_62m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_62m.tdf              ;         ;
+; db/sign_div_unsign_9kh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_9kh.tdf         ;         ;
+; db/alt_u_div_ose.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_ose.tdf               ;         ;
+; db/lpm_divide_nbm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_nbm.tdf              ;         ;
+; db/lpm_divide_hbm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_hbm.tdf              ;         ;
+; db/lpm_divide_vcm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_vcm.tdf              ;         ;
+; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_5nh.tdf         ;         ;
+; db/alt_u_div_g2f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_g2f.tdf               ;         ;
+; db/lpm_divide_4dm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_4dm.tdf              ;         ;
+; db/sign_div_unsign_anh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_anh.tdf         ;         ;
+; db/alt_u_div_q2f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_q2f.tdf               ;         ;
+; db/lpm_divide_ucm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_ucm.tdf              ;         ;
+; db/sign_div_unsign_4nh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_4nh.tdf         ;         ;
+; db/alt_u_div_e2f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_e2f.tdf               ;         ;
+; db/lpm_divide_fbm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_fbm.tdf              ;         ;
+; db/lpm_divide_lbm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_lbm.tdf              ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 2068         ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 4050         ;
+;     -- 7 input functions                    ; 1            ;
+;     -- 6 input functions                    ; 84           ;
+;     -- 5 input functions                    ; 126          ;
+;     -- 4 input functions                    ; 703          ;
+;     -- <=3 input functions                  ; 3136         ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 111          ;
+;                                             ;              ;
+; I/O pins                                    ; 70           ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; KEY[2]~input ;
+; Maximum fan-out                             ; 68           ;
+; Total fan-out                               ; 12549        ;
+; Average fan-out                             ; 2.92         ;
++---------------------------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                             ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |my_clock                                 ; 4050 (107)          ; 111 (0)                   ; 0                 ; 0          ; 70   ; 0            ; |my_clock                                                                                                             ; my_clock            ; work         ;
+;    |CL:cl|                                ; 1417 (121)          ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl                                                                                                       ; CL                  ; work         ;
+;       |lpm_divide:Div1|                   ; 230 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Div1                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_hbm:auto_generated|  ; 230 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Div1|lpm_divide_hbm:auto_generated                                                         ; lpm_divide_hbm      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 230 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                             ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_kve:divider|    ; 230 (230)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider       ; alt_u_div_kve       ; work         ;
+;       |lpm_divide:Div3|                   ; 257 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Div3                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_ucm:auto_generated|  ; 257 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Div3|lpm_divide_ucm:auto_generated                                                         ; lpm_divide_ucm      ; work         ;
+;             |sign_div_unsign_4nh:divider| ; 257 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Div3|lpm_divide_ucm:auto_generated|sign_div_unsign_4nh:divider                             ; sign_div_unsign_4nh ; work         ;
+;                |alt_u_div_e2f:divider|    ; 257 (257)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Div3|lpm_divide_ucm:auto_generated|sign_div_unsign_4nh:divider|alt_u_div_e2f:divider       ; alt_u_div_e2f       ; work         ;
+;       |lpm_divide:Div4|                   ; 78 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Div4                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_fbm:auto_generated|  ; 78 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Div4|lpm_divide_fbm:auto_generated                                                         ; lpm_divide_fbm      ; work         ;
+;             |sign_div_unsign_llh:divider| ; 78 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Div4|lpm_divide_fbm:auto_generated|sign_div_unsign_llh:divider                             ; sign_div_unsign_llh ; work         ;
+;                |alt_u_div_gve:divider|    ; 78 (78)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Div4|lpm_divide_fbm:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider       ; alt_u_div_gve       ; work         ;
+;       |lpm_divide:Mod0|                   ; 185 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod0                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_i3m:auto_generated|  ; 185 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod0|lpm_divide_i3m:auto_generated                                                         ; lpm_divide_i3m      ; work         ;
+;             |sign_div_unsign_llh:divider| ; 185 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod0|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider                             ; sign_div_unsign_llh ; work         ;
+;                |alt_u_div_gve:divider|    ; 185 (185)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod0|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider       ; alt_u_div_gve       ; work         ;
+;       |lpm_divide:Mod1|                   ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod1                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_k3m:auto_generated|  ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod1|lpm_divide_k3m:auto_generated                                                         ; lpm_divide_k3m      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                             ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_kve:divider|    ; 236 (236)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider       ; alt_u_div_kve       ; work         ;
+;       |lpm_divide:Mod2|                   ; 199 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod2                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_k3m:auto_generated|  ; 199 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod2|lpm_divide_k3m:auto_generated                                                         ; lpm_divide_k3m      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 199 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod2|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                             ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_kve:divider|    ; 199 (199)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod2|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider       ; alt_u_div_kve       ; work         ;
+;       |lpm_divide:Mod3|                   ; 29 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod3                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_62m:auto_generated|  ; 29 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod3|lpm_divide_62m:auto_generated                                                         ; lpm_divide_62m      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 29 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod3|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider                             ; sign_div_unsign_9kh ; work         ;
+;                |alt_u_div_ose:divider|    ; 29 (29)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod3|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider       ; alt_u_div_ose       ; work         ;
+;       |lpm_divide:Mod4|                   ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod4                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_i3m:auto_generated|  ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod4|lpm_divide_i3m:auto_generated                                                         ; lpm_divide_i3m      ; work         ;
+;             |sign_div_unsign_llh:divider| ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod4|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider                             ; sign_div_unsign_llh ; work         ;
+;                |alt_u_div_gve:divider|    ; 82 (82)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|CL:cl|lpm_divide:Mod4|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider       ; alt_u_div_gve       ; work         ;
+;    |Clock:clock|                          ; 1093 (135)          ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock                                                                                                 ; Clock               ; work         ;
+;       |lpm_divide:Div1|                   ; 182 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_nbm:auto_generated|  ; 182 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Div1|lpm_divide_nbm:auto_generated                                                   ; lpm_divide_nbm      ; work         ;
+;             |sign_div_unsign_tlh:divider| ; 182 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Div1|lpm_divide_nbm:auto_generated|sign_div_unsign_tlh:divider                       ; sign_div_unsign_tlh ; work         ;
+;                |alt_u_div_00f:divider|    ; 182 (182)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Div1|lpm_divide_nbm:auto_generated|sign_div_unsign_tlh:divider|alt_u_div_00f:divider ; alt_u_div_00f       ; work         ;
+;       |lpm_divide:Div3|                   ; 164 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Div3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_4dm:auto_generated|  ; 164 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Div3|lpm_divide_4dm:auto_generated                                                   ; lpm_divide_4dm      ; work         ;
+;             |sign_div_unsign_anh:divider| ; 164 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Div3|lpm_divide_4dm:auto_generated|sign_div_unsign_anh:divider                       ; sign_div_unsign_anh ; work         ;
+;                |alt_u_div_q2f:divider|    ; 164 (164)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Div3|lpm_divide_4dm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_q2f:divider ; alt_u_div_q2f       ; work         ;
+;       |lpm_divide:Div4|                   ; 45 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Div4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_lbm:auto_generated|  ; 45 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Div4|lpm_divide_lbm:auto_generated                                                   ; lpm_divide_lbm      ; work         ;
+;             |sign_div_unsign_rlh:divider| ; 45 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Div4|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh ; work         ;
+;                |alt_u_div_sve:divider|    ; 45 (45)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Div4|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_sve:divider ; alt_u_div_sve       ; work         ;
+;       |lpm_divide:Mod0|                   ; 152 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_o3m:auto_generated|  ; 152 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod0|lpm_divide_o3m:auto_generated                                                   ; lpm_divide_o3m      ; work         ;
+;             |sign_div_unsign_rlh:divider| ; 152 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod0|lpm_divide_o3m:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh ; work         ;
+;                |alt_u_div_sve:divider|    ; 152 (152)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod0|lpm_divide_o3m:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_sve:divider ; alt_u_div_sve       ; work         ;
+;       |lpm_divide:Mod1|                   ; 187 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_q3m:auto_generated|  ; 187 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod1|lpm_divide_q3m:auto_generated                                                   ; lpm_divide_q3m      ; work         ;
+;             |sign_div_unsign_tlh:divider| ; 187 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod1|lpm_divide_q3m:auto_generated|sign_div_unsign_tlh:divider                       ; sign_div_unsign_tlh ; work         ;
+;                |alt_u_div_00f:divider|    ; 187 (187)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod1|lpm_divide_q3m:auto_generated|sign_div_unsign_tlh:divider|alt_u_div_00f:divider ; alt_u_div_00f       ; work         ;
+;       |lpm_divide:Mod2|                   ; 150 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_q3m:auto_generated|  ; 150 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod2|lpm_divide_q3m:auto_generated                                                   ; lpm_divide_q3m      ; work         ;
+;             |sign_div_unsign_tlh:divider| ; 150 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod2|lpm_divide_q3m:auto_generated|sign_div_unsign_tlh:divider                       ; sign_div_unsign_tlh ; work         ;
+;                |alt_u_div_00f:divider|    ; 150 (150)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod2|lpm_divide_q3m:auto_generated|sign_div_unsign_tlh:divider|alt_u_div_00f:divider ; alt_u_div_00f       ; work         ;
+;       |lpm_divide:Mod3|                   ; 29 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_62m:auto_generated|  ; 29 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod3|lpm_divide_62m:auto_generated                                                   ; lpm_divide_62m      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 29 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod3|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
+;                |alt_u_div_ose:divider|    ; 29 (29)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod3|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider ; alt_u_div_ose       ; work         ;
+;       |lpm_divide:Mod4|                   ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_o3m:auto_generated|  ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod4|lpm_divide_o3m:auto_generated                                                   ; lpm_divide_o3m      ; work         ;
+;             |sign_div_unsign_rlh:divider| ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod4|lpm_divide_o3m:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh ; work         ;
+;                |alt_u_div_sve:divider|    ; 49 (49)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Clock:clock|lpm_divide:Mod4|lpm_divide_o3m:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_sve:divider ; alt_u_div_sve       ; work         ;
+;    |Timer:timer|                          ; 1433 (146)          ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer                                                                                                 ; Timer               ; work         ;
+;       |lpm_divide:Div1|                   ; 250 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ibm:auto_generated|  ; 250 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Div1|lpm_divide_ibm:auto_generated                                                   ; lpm_divide_ibm      ; work         ;
+;             |sign_div_unsign_olh:divider| ; 250 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Div1|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
+;                |alt_u_div_mve:divider|    ; 250 (250)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Div1|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve       ; work         ;
+;       |lpm_divide:Div3|                   ; 244 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Div3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 244 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Div3|lpm_divide_vcm:auto_generated                                                   ; lpm_divide_vcm      ; work         ;
+;             |sign_div_unsign_5nh:divider| ; 244 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Div3|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
+;                |alt_u_div_g2f:divider|    ; 244 (244)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Div3|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_g2f:divider ; alt_u_div_g2f       ; work         ;
+;       |lpm_divide:Div4|                   ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Div4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_fbm:auto_generated|  ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Div4|lpm_divide_fbm:auto_generated                                                   ; lpm_divide_fbm      ; work         ;
+;             |sign_div_unsign_llh:divider| ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Div4|lpm_divide_fbm:auto_generated|sign_div_unsign_llh:divider                       ; sign_div_unsign_llh ; work         ;
+;                |alt_u_div_gve:divider|    ; 67 (67)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Div4|lpm_divide_fbm:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider ; alt_u_div_gve       ; work         ;
+;       |lpm_divide:Mod0|                   ; 185 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_i3m:auto_generated|  ; 185 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod0|lpm_divide_i3m:auto_generated                                                   ; lpm_divide_i3m      ; work         ;
+;             |sign_div_unsign_llh:divider| ; 185 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod0|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider                       ; sign_div_unsign_llh ; work         ;
+;                |alt_u_div_gve:divider|    ; 185 (185)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod0|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider ; alt_u_div_gve       ; work         ;
+;       |lpm_divide:Mod1|                   ; 258 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_l3m:auto_generated|  ; 258 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod1|lpm_divide_l3m:auto_generated                                                   ; lpm_divide_l3m      ; work         ;
+;             |sign_div_unsign_olh:divider| ; 258 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod1|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
+;                |alt_u_div_mve:divider|    ; 258 (258)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod1|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve       ; work         ;
+;       |lpm_divide:Mod2|                   ; 183 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_k3m:auto_generated|  ; 183 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod2|lpm_divide_k3m:auto_generated                                                   ; lpm_divide_k3m      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 183 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod2|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_kve:divider|    ; 183 (183)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod2|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
+;       |lpm_divide:Mod3|                   ; 29 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_62m:auto_generated|  ; 29 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod3|lpm_divide_62m:auto_generated                                                   ; lpm_divide_62m      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 29 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod3|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
+;                |alt_u_div_ose:divider|    ; 29 (29)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod3|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider ; alt_u_div_ose       ; work         ;
+;       |lpm_divide:Mod4|                   ; 71 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_i3m:auto_generated|  ; 71 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod4|lpm_divide_i3m:auto_generated                                                   ; lpm_divide_i3m      ; work         ;
+;             |sign_div_unsign_llh:divider| ; 71 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod4|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider                       ; sign_div_unsign_llh ; work         ;
+;                |alt_u_div_gve:divider|    ; 71 (71)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |my_clock|Timer:timer|lpm_divide:Mod4|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider ; alt_u_div_gve       ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 111   ;
+; Number of registers using Synchronous Clear  ; 70    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 83    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 41 bits   ; 82 LEs        ; 82 LEs               ; 0 LEs                  ; No         ; |my_clock|HEX5             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_i3m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_o3m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------+
+; Parameter Name         ; Value          ; Type                         ;
++------------------------+----------------+------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                      ;
+; CBXI_PARAMETER         ; lpm_divide_i3m ; Untyped                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE               ;
++------------------------+----------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Mod1 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                            ;
+; LPM_WIDTHD             ; 7              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_l3m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Mod1 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                            ;
+; LPM_WIDTHD             ; 6              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_q3m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Mod1 ;
++------------------------+----------------+------------------------------+
+; Parameter Name         ; Value          ; Type                         ;
++------------------------+----------------+------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                      ;
+; LPM_WIDTHD             ; 6              ; Untyped                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                      ;
+; CBXI_PARAMETER         ; lpm_divide_k3m ; Untyped                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE               ;
++------------------------+----------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Div1 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                            ;
+; LPM_WIDTHD             ; 7              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_ibm ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Mod2 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                            ;
+; LPM_WIDTHD             ; 6              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_k3m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Mod3 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_62m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Div1 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                            ;
+; LPM_WIDTHD             ; 6              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_nbm ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Mod2 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                            ;
+; LPM_WIDTHD             ; 6              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_q3m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Mod3 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_62m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Div1 ;
++------------------------+----------------+------------------------------+
+; Parameter Name         ; Value          ; Type                         ;
++------------------------+----------------+------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                      ;
+; LPM_WIDTHD             ; 6              ; Untyped                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                      ;
+; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE               ;
++------------------------+----------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Mod2 ;
++------------------------+----------------+------------------------------+
+; Parameter Name         ; Value          ; Type                         ;
++------------------------+----------------+------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                      ;
+; LPM_WIDTHD             ; 6              ; Untyped                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                      ;
+; CBXI_PARAMETER         ; lpm_divide_k3m ; Untyped                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE               ;
++------------------------+----------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Mod3 ;
++------------------------+----------------+------------------------------+
+; Parameter Name         ; Value          ; Type                         ;
++------------------------+----------------+------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                      ;
+; CBXI_PARAMETER         ; lpm_divide_62m ; Untyped                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE               ;
++------------------------+----------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Div3 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                            ;
+; LPM_WIDTHD             ; 13             ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Mod4 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_i3m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Div3 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                            ;
+; LPM_WIDTHD             ; 12             ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_4dm ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Mod4 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_o3m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Div3 ;
++------------------------+----------------+------------------------------+
+; Parameter Name         ; Value          ; Type                         ;
++------------------------+----------------+------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                      ;
+; LPM_WIDTHD             ; 12             ; Untyped                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                      ;
+; CBXI_PARAMETER         ; lpm_divide_ucm ; Untyped                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE               ;
++------------------------+----------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Mod4 ;
++------------------------+----------------+------------------------------+
+; Parameter Name         ; Value          ; Type                         ;
++------------------------+----------------+------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                      ;
+; CBXI_PARAMETER         ; lpm_divide_i3m ; Untyped                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE               ;
++------------------------+----------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Timer:timer|lpm_divide:Div4 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_fbm ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Clock:clock|lpm_divide:Div4 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_lbm ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: CL:cl|lpm_divide:Div4 ;
++------------------------+----------------+------------------------------+
+; Parameter Name         ; Value          ; Type                         ;
++------------------------+----------------+------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                      ;
+; CBXI_PARAMETER         ; lpm_divide_fbm ; Untyped                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE               ;
++------------------------+----------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CL:cl"                                                                                                                      ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                    ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; count ; Output ; Warning  ; Output or bidir port (20 bits) is wider than the port expression (1 bits) it drives; bit(s) "count[19..1]" have no fanouts ;
+; count ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                        ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 111                         ;
+;     CLR               ; 38                          ;
+;     CLR SCLR          ; 25                          ;
+;     ENA CLR SCLR      ; 20                          ;
+;     SCLR              ; 25                          ;
+;     plain             ; 3                           ;
+; arriav_lcell_comb     ; 4068                        ;
+;     arith             ; 1998                        ;
+;         0 data inputs ; 426                         ;
+;         1 data inputs ; 317                         ;
+;         2 data inputs ; 72                          ;
+;         3 data inputs ; 782                         ;
+;         4 data inputs ; 401                         ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 1919                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 17                          ;
+;         2 data inputs ; 907                         ;
+;         3 data inputs ; 482                         ;
+;         4 data inputs ; 302                         ;
+;         5 data inputs ; 126                         ;
+;         6 data inputs ; 84                          ;
+;     shared            ; 150                         ;
+;         0 data inputs ; 39                          ;
+;         1 data inputs ; 111                         ;
+; boundary_port         ; 70                          ;
+;                       ;                             ;
+; Max LUT depth         ; 36.60                       ;
+; Average LUT depth     ; 25.27                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:05     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Sat Sep 26 20:08:25 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off my_clock -c my_clock
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file timer.v
+    Info (12023): Found entity 1: Timer File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 1
+Warning (10238): Verilog Module Declaration warning at CL.v(1): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "CL" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cl.v
+    Info (12023): Found entity 1: CL File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 1
+Warning (12125): Using design file my_clock.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: my_clock File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 6
+Info (12127): Elaborating entity "my_clock" for the top level hierarchy
+Warning (10030): Net "LEDRa[9..1]" at my_clock.v(38) has no driver or initial value, using a default initial value '0' File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 38
+Warning (10030): Net "LEDRb[9..2]" at my_clock.v(38) has no driver or initial value, using a default initial value '0' File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 38
+Warning (12125): Using design file clock.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Clock File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 1
+Info (12128): Elaborating entity "Clock" for hierarchy "Clock:clock" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 43
+Warning (10230): Verilog HDL assignment warning at clock.v(22): truncated value with size 32 to match size of target (25) File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 22
+Warning (10230): Verilog HDL assignment warning at clock.v(28): truncated value with size 32 to match size of target (17) File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 28
+Warning (10230): Verilog HDL assignment warning at clock.v(30): truncated value with size 32 to match size of target (17) File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 30
+Warning (10230): Verilog HDL assignment warning at clock.v(32): truncated value with size 32 to match size of target (17) File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 32
+Warning (10230): Verilog HDL assignment warning at clock.v(39): truncated value with size 32 to match size of target (17) File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 39
+Info (12128): Elaborating entity "Timer" for hierarchy "Timer:timer" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 44
+Warning (10230): Verilog HDL assignment warning at Timer.v(26): truncated value with size 32 to match size of target (25) File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 26
+Warning (10230): Verilog HDL assignment warning at Timer.v(43): truncated value with size 32 to match size of target (20) File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 43
+Info (12128): Elaborating entity "CL" for hierarchy "CL:cl" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 45
+Warning (10230): Verilog HDL assignment warning at CL.v(13): truncated value with size 32 to match size of target (20) File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 13
+Warning (10230): Verilog HDL assignment warning at CL.v(15): truncated value with size 32 to match size of target (20) File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 15
+Warning (10230): Verilog HDL assignment warning at CL.v(17): truncated value with size 32 to match size of target (20) File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 17
+Info (278001): Inferred 24 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Timer:timer|Mod0" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 50
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Clock:clock|Mod0" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 45
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "CL:cl|Mod0" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Timer:timer|Mod1" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 63
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Clock:clock|Mod1" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 58
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "CL:cl|Mod1" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 35
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Timer:timer|Div1" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 76
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Timer:timer|Mod2" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 76
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Timer:timer|Mod3" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 76
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Clock:clock|Div1" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 71
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Clock:clock|Mod2" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 71
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Clock:clock|Mod3" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 71
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "CL:cl|Div1" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 48
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "CL:cl|Mod2" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 48
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "CL:cl|Mod3" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 48
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Timer:timer|Div3" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 102
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Timer:timer|Mod4" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 102
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Clock:clock|Div3" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 97
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Clock:clock|Mod4" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 97
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "CL:cl|Div3" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 74
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "CL:cl|Mod4" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 74
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Timer:timer|Div4" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 115
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Clock:clock|Div4" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 110
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "CL:cl|Div4" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 87
+Info (12130): Elaborated megafunction instantiation "Timer:timer|lpm_divide:Mod0" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 50
+Info (12133): Instantiated megafunction "Timer:timer|lpm_divide:Mod0" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 50
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i3m.tdf
+    Info (12023): Found entity 1: lpm_divide_i3m File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_i3m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_llh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_llh File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_llh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_gve.tdf
+    Info (12023): Found entity 1: alt_u_div_gve File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_gve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "Clock:clock|lpm_divide:Mod0" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 45
+Info (12133): Instantiated megafunction "Clock:clock|lpm_divide:Mod0" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 45
+    Info (12134): Parameter "LPM_WIDTHN" = "17"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_o3m.tdf
+    Info (12023): Found entity 1: lpm_divide_o3m File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_o3m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_rlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_rlh File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_rlh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_sve.tdf
+    Info (12023): Found entity 1: alt_u_div_sve File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_sve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "Timer:timer|lpm_divide:Mod1" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 63
+Info (12133): Instantiated megafunction "Timer:timer|lpm_divide:Mod1" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 63
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_l3m.tdf
+    Info (12023): Found entity 1: lpm_divide_l3m File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_l3m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_olh File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_olh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
+    Info (12023): Found entity 1: alt_u_div_mve File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_mve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "Clock:clock|lpm_divide:Mod1" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 58
+Info (12133): Instantiated megafunction "Clock:clock|lpm_divide:Mod1" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 58
+    Info (12134): Parameter "LPM_WIDTHN" = "17"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_q3m.tdf
+    Info (12023): Found entity 1: lpm_divide_q3m File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_q3m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_tlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_tlh File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_tlh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_00f.tdf
+    Info (12023): Found entity 1: alt_u_div_00f File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_00f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "CL:cl|lpm_divide:Mod1" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 35
+Info (12133): Instantiated megafunction "CL:cl|lpm_divide:Mod1" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 35
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_k3m.tdf
+    Info (12023): Found entity 1: lpm_divide_k3m File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_k3m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_nlh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
+    Info (12023): Found entity 1: alt_u_div_kve File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_kve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "Timer:timer|lpm_divide:Div1" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 76
+Info (12133): Instantiated megafunction "Timer:timer|lpm_divide:Div1" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 76
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ibm.tdf
+    Info (12023): Found entity 1: lpm_divide_ibm File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_ibm.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "Timer:timer|lpm_divide:Mod3" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 76
+Info (12133): Instantiated megafunction "Timer:timer|lpm_divide:Mod3" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 76
+    Info (12134): Parameter "LPM_WIDTHN" = "6"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_62m.tdf
+    Info (12023): Found entity 1: lpm_divide_62m File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_62m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9kh File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_9kh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ose.tdf
+    Info (12023): Found entity 1: alt_u_div_ose File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_ose.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "Clock:clock|lpm_divide:Div1" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 71
+Info (12133): Instantiated megafunction "Clock:clock|lpm_divide:Div1" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 71
+    Info (12134): Parameter "LPM_WIDTHN" = "17"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_nbm.tdf
+    Info (12023): Found entity 1: lpm_divide_nbm File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_nbm.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "CL:cl|lpm_divide:Div1" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 48
+Info (12133): Instantiated megafunction "CL:cl|lpm_divide:Div1" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 48
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
+    Info (12023): Found entity 1: lpm_divide_hbm File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_hbm.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "Timer:timer|lpm_divide:Div3" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 102
+Info (12133): Instantiated megafunction "Timer:timer|lpm_divide:Div3" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 102
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "13"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vcm.tdf
+    Info (12023): Found entity 1: lpm_divide_vcm File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_vcm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_5nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_5nh File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_5nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_g2f.tdf
+    Info (12023): Found entity 1: alt_u_div_g2f File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_g2f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "Clock:clock|lpm_divide:Div3" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 97
+Info (12133): Instantiated megafunction "Clock:clock|lpm_divide:Div3" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 97
+    Info (12134): Parameter "LPM_WIDTHN" = "17"
+    Info (12134): Parameter "LPM_WIDTHD" = "12"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_4dm.tdf
+    Info (12023): Found entity 1: lpm_divide_4dm File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_4dm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_anh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_anh File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_anh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_q2f.tdf
+    Info (12023): Found entity 1: alt_u_div_q2f File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_q2f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "CL:cl|lpm_divide:Div3" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 74
+Info (12133): Instantiated megafunction "CL:cl|lpm_divide:Div3" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 74
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "12"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ucm.tdf
+    Info (12023): Found entity 1: lpm_divide_ucm File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_ucm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_4nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_4nh File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/sign_div_unsign_4nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_e2f.tdf
+    Info (12023): Found entity 1: alt_u_div_e2f File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/alt_u_div_e2f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "Timer:timer|lpm_divide:Div4" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 115
+Info (12133): Instantiated megafunction "Timer:timer|lpm_divide:Div4" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v Line: 115
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fbm.tdf
+    Info (12023): Found entity 1: lpm_divide_fbm File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_fbm.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "Clock:clock|lpm_divide:Div4" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 110
+Info (12133): Instantiated megafunction "Clock:clock|lpm_divide:Div4" with the following parameter: File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 110
+    Info (12134): Parameter "LPM_WIDTHN" = "17"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_lbm.tdf
+    Info (12023): Found entity 1: lpm_divide_lbm File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/db/lpm_divide_lbm.tdf Line: 24
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "Clock:clock|count[0]" is converted into an equivalent circuit using register "Clock:clock|count[0]~_emulated" and latch "Clock:clock|count[0]~1" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "Clock:clock|count[1]" is converted into an equivalent circuit using register "Clock:clock|count[1]~_emulated" and latch "Clock:clock|count[1]~5" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "Clock:clock|count[2]" is converted into an equivalent circuit using register "Clock:clock|count[2]~_emulated" and latch "Clock:clock|count[2]~9" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "Clock:clock|count[3]" is converted into an equivalent circuit using register "Clock:clock|count[3]~_emulated" and latch "Clock:clock|count[3]~13" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "CL:cl|count[0]" is converted into an equivalent circuit using register "CL:cl|count[0]~_emulated" and latch "CL:cl|count[0]~1" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[1]" is converted into an equivalent circuit using register "CL:cl|count[1]~_emulated" and latch "CL:cl|count[1]~5" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[2]" is converted into an equivalent circuit using register "CL:cl|count[2]~_emulated" and latch "CL:cl|count[2]~9" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[3]" is converted into an equivalent circuit using register "CL:cl|count[3]~_emulated" and latch "CL:cl|count[3]~13" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "Clock:clock|count[5]" is converted into an equivalent circuit using register "Clock:clock|count[5]~_emulated" and latch "Clock:clock|count[5]~17" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "Clock:clock|count[4]" is converted into an equivalent circuit using register "Clock:clock|count[4]~_emulated" and latch "Clock:clock|count[4]~21" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "CL:cl|count[5]" is converted into an equivalent circuit using register "CL:cl|count[5]~_emulated" and latch "CL:cl|count[5]~17" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[4]" is converted into an equivalent circuit using register "CL:cl|count[4]~_emulated" and latch "CL:cl|count[4]~21" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "Clock:clock|count[16]" is converted into an equivalent circuit using register "Clock:clock|count[16]~_emulated" and latch "Clock:clock|count[16]~25" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "Clock:clock|count[15]" is converted into an equivalent circuit using register "Clock:clock|count[15]~_emulated" and latch "Clock:clock|count[15]~29" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "Clock:clock|count[14]" is converted into an equivalent circuit using register "Clock:clock|count[14]~_emulated" and latch "Clock:clock|count[14]~33" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "Clock:clock|count[13]" is converted into an equivalent circuit using register "Clock:clock|count[13]~_emulated" and latch "Clock:clock|count[13]~37" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "Clock:clock|count[12]" is converted into an equivalent circuit using register "Clock:clock|count[12]~_emulated" and latch "Clock:clock|count[12]~41" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "Clock:clock|count[11]" is converted into an equivalent circuit using register "Clock:clock|count[11]~_emulated" and latch "Clock:clock|count[11]~45" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "Clock:clock|count[10]" is converted into an equivalent circuit using register "Clock:clock|count[10]~_emulated" and latch "Clock:clock|count[10]~49" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "Clock:clock|count[9]" is converted into an equivalent circuit using register "Clock:clock|count[9]~_emulated" and latch "Clock:clock|count[9]~53" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "Clock:clock|count[8]" is converted into an equivalent circuit using register "Clock:clock|count[8]~_emulated" and latch "Clock:clock|count[8]~57" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "Clock:clock|count[7]" is converted into an equivalent circuit using register "Clock:clock|count[7]~_emulated" and latch "Clock:clock|count[7]~61" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "Clock:clock|count[6]" is converted into an equivalent circuit using register "Clock:clock|count[6]~_emulated" and latch "Clock:clock|count[6]~65" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v Line: 33
+    Warning (13310): Register "CL:cl|count[6]" is converted into an equivalent circuit using register "CL:cl|count[6]~_emulated" and latch "CL:cl|count[6]~25" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[7]" is converted into an equivalent circuit using register "CL:cl|count[7]~_emulated" and latch "CL:cl|count[7]~29" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[11]" is converted into an equivalent circuit using register "CL:cl|count[11]~_emulated" and latch "CL:cl|count[11]~33" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[10]" is converted into an equivalent circuit using register "CL:cl|count[10]~_emulated" and latch "CL:cl|count[10]~37" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[9]" is converted into an equivalent circuit using register "CL:cl|count[9]~_emulated" and latch "CL:cl|count[9]~41" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[8]" is converted into an equivalent circuit using register "CL:cl|count[8]~_emulated" and latch "CL:cl|count[8]~45" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[12]" is converted into an equivalent circuit using register "CL:cl|count[12]~_emulated" and latch "CL:cl|count[12]~49" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[13]" is converted into an equivalent circuit using register "CL:cl|count[13]~_emulated" and latch "CL:cl|count[13]~53" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[14]" is converted into an equivalent circuit using register "CL:cl|count[14]~_emulated" and latch "CL:cl|count[14]~57" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[15]" is converted into an equivalent circuit using register "CL:cl|count[15]~_emulated" and latch "CL:cl|count[15]~61" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[17]" is converted into an equivalent circuit using register "CL:cl|count[17]~_emulated" and latch "CL:cl|count[17]~65" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[16]" is converted into an equivalent circuit using register "CL:cl|count[16]~_emulated" and latch "CL:cl|count[16]~69" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[19]" is converted into an equivalent circuit using register "CL:cl|count[19]~_emulated" and latch "CL:cl|count[19]~73" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+    Warning (13310): Register "CL:cl|count[18]" is converted into an equivalent circuit using register "CL:cl|count[18]~_emulated" and latch "CL:cl|count[18]~77" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/CL.v Line: 16
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 21
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 21
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 21
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 21
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 21
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 21
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 21
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 21
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 9
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 10
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 11
+    Warning (15610): No output dependent on input pin "KEY[3]" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 15
+    Warning (15610): No output dependent on input pin "SW[2]" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[3]" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[4]" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[5]" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[6]" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[7]" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[8]" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[9]" File: D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v Line: 18
+Info (21057): Implemented 4120 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 4050 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 77 warnings
+    Info: Peak virtual memory: 4900 megabytes
+    Info: Processing ended: Sat Sep 26 20:08:45 2020
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:38
+
+

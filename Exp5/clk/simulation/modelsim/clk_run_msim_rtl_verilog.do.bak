@@ -1,0 +1,12 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp5/clk {D:/data/Homework/FPGA/Exp/Exp5/clk/div.v}
+vlog -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp5/clk {D:/data/Homework/FPGA/Exp/Exp5/clk/decode_hex.v}
+vlog -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp5/clk {D:/data/Homework/FPGA/Exp/Exp5/clk/clock.v}
+vlog -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp5/clk {D:/data/Homework/FPGA/Exp/Exp5/clk/clk.v}
+

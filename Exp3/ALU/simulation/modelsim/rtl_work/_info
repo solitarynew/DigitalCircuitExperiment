@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/data/Homework/FPGA/Exp/Exp3/ALU/simulation/modelsim
+vALU
+!s110 1600671660
+!i10b 1
+!s100 K30dZC3Cfz^Z:h1@dFiI:2
+I9QSH@eh_YEdd@?<a3chL@1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1600669342
+8D:/data/Homework/FPGA/Exp/Exp3/ALU/ALU.v
+FD:/data/Homework/FPGA/Exp/Exp3/ALU/ALU.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z3 !s108 1600671660.000000
+!s107 D:/data/Homework/FPGA/Exp/Exp3/ALU/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp3/ALU|D:/data/Homework/FPGA/Exp/Exp3/ALU/ALU.v|
+!i113 1
+Z4 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp3/ALU
+Z5 tCvgOpt 0
+n@a@l@u
+vALU_vlg_tst
+!s110 1600671661
+!i10b 1
+!s100 bjlzm<h[HiD:Z9a053@Je1
+IRZOo78TV0fznKoU0R?6gB2
+R1
+R0
+w1600602662
+8D:/data/Homework/FPGA/Exp/Exp3/ALU/simulation/modelsim/ALU.vt
+FD:/data/Homework/FPGA/Exp/Exp3/ALU/simulation/modelsim/ALU.vt
+L0 28
+R2
+r1
+!s85 0
+31
+R3
+!s107 D:/data/Homework/FPGA/Exp/Exp3/ALU/simulation/modelsim/ALU.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp3/ALU/simulation/modelsim|D:/data/Homework/FPGA/Exp/Exp3/ALU/simulation/modelsim/ALU.vt|
+!i113 1
+R4
+!s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp3/ALU/simulation/modelsim
+R5
+n@a@l@u_vlg_tst

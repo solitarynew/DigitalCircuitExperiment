@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, D:/data/Homework/FPGA/Exp/mux41/mux41.v
+source_file = 1, D:/data/Homework/FPGA/Exp/mux41/db/mux41.cbx.xml
+design_name = mux41
+instance = comp, \y~output , y~output, mux41, 1
+instance = comp, \a[0]~input , a[0]~input, mux41, 1
+instance = comp, \s[0]~input , s[0]~input, mux41, 1
+instance = comp, \s[1]~input , s[1]~input, mux41, 1
+instance = comp, \a[1]~input , a[1]~input, mux41, 1
+instance = comp, \a[3]~input , a[3]~input, mux41, 1
+instance = comp, \a[2]~input , a[2]~input, mux41, 1
+instance = comp, \Mux0~0 , Mux0~0, mux41, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, mux41, 1

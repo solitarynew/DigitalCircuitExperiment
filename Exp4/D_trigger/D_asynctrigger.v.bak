@@ -1,0 +1,10 @@
+module D_asynctrigger(clk,in_d,en,clr,out_q);
+	input clk;
+	input in_d;
+	input en;
+	input clr;
+	output reg out_q;
+
+
+
+endmodule

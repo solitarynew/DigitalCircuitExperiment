@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at lfsr.v(18): object "HEX0" differs only in case from object "hex0" in the same scope File: D:/data/Homework/FPGA/Exp/Exp6/LFSR/lfsr.v Line: 18
+Info (10281): Verilog HDL Declaration information at lfsr.v(19): object "HEX1" differs only in case from object "hex1" in the same scope File: D:/data/Homework/FPGA/Exp/Exp6/LFSR/lfsr.v Line: 19

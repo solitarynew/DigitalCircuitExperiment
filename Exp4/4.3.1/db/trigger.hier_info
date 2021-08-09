@@ -1,0 +1,31 @@
+|trigger
+clk => clk.IN2
+in_en => in_en.IN2
+in_d => in_d.IN2
+out_lock1 << Block:block.port3
+out_lock2 << Block:block.port4
+out_unlock1 << Unblock:unblock.port3
+out_unlock2 << Unblock:unblock.port4
+
+
+|trigger|Block:block
+clk => out_lock2~reg0.CLK
+clk => out_lock1~reg0.CLK
+in_en => out_lock2~reg0.ENA
+in_en => out_lock1~reg0.ENA
+in_d => out_lock2~reg0.DATAIN
+in_d => out_lock1~reg0.DATAIN
+out_lock1 <= out_lock1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_lock2 <= out_lock2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|trigger|Unblock:unblock
+clk => out_unlock2~reg0.CLK
+clk => out_unlock1~reg0.CLK
+in_en => out_unlock2~reg0.ENA
+in_en => out_unlock1~reg0.ENA
+in_d => out_unlock1~reg0.DATAIN
+out_unlock1 <= out_unlock1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_unlock2 <= out_unlock2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

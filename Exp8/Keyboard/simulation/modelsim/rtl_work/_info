@@ -1,0 +1,188 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/data/Homework/FPGA/Exp/Exp8/Keyboard/simulation/modelsim
+vascii
+Z1 !s110 1604451691
+!i10b 1
+!s100 Va81OnnW]7zAoUE[jdMYT2
+I?:Ud?`kdkEhXP8TKiZnGL2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1604451432
+8D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ascii.v
+FD:/data/Homework/FPGA/Exp/Exp8/Keyboard/ascii.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1604451691.000000
+!s107 D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ascii.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp8/Keyboard|D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ascii.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp8/Keyboard
+Z7 tCvgOpt 0
+vdecode_ascii_hex
+R1
+!i10b 1
+!s100 fD;>2VfT?MPzRWMnPg[fM1
+IT@XLEkGZR;WazbL<>EGV<1
+R2
+R0
+w1603890548
+8D:/data/Homework/FPGA/Exp/Exp8/Keyboard/decode_ascii_hex.v
+FD:/data/Homework/FPGA/Exp/Exp8/Keyboard/decode_ascii_hex.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/data/Homework/FPGA/Exp/Exp8/Keyboard/decode_ascii_hex.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp8/Keyboard|D:/data/Homework/FPGA/Exp/Exp8/Keyboard/decode_ascii_hex.v|
+!i113 1
+R5
+R6
+R7
+vdecode_hex
+Z8 !s110 1604451692
+!i10b 1
+!s100 :3fh8d;jz:Ba>zhPfD0S12
+IRo5Q3^aYeGaQO2NJMgaNk2
+R2
+R0
+w1603887924
+8D:/data/Homework/FPGA/Exp/Exp8/Keyboard/decode_hex.v
+FD:/data/Homework/FPGA/Exp/Exp8/Keyboard/decode_hex.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z9 !s108 1604451692.000000
+!s107 D:/data/Homework/FPGA/Exp/Exp8/Keyboard/decode_hex.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp8/Keyboard|D:/data/Homework/FPGA/Exp/Exp8/Keyboard/decode_hex.v|
+!i113 1
+R5
+R6
+R7
+vKeyboard
+R1
+!i10b 1
+!s100 ;g^_iZl=TYGN7mchE_3@k3
+IcQNR3zfFEG_BF;>PI1meE2
+R2
+R0
+w1604451466
+8D:/data/Homework/FPGA/Exp/Exp8/Keyboard/Keyboard.v
+FD:/data/Homework/FPGA/Exp/Exp8/Keyboard/Keyboard.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/data/Homework/FPGA/Exp/Exp8/Keyboard/Keyboard.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp8/Keyboard|D:/data/Homework/FPGA/Exp/Exp8/Keyboard/Keyboard.v|
+!i113 1
+R5
+R6
+R7
+n@keyboard
+vKeyboard_vlg_tst
+R8
+!i10b 1
+!s100 [g>Q5;V;_JFV^z^2B;Di^0
+I<]cc`B8efIJ_^MkY=oV;c0
+R2
+R0
+w1604242708
+8D:/data/Homework/FPGA/Exp/Exp8/Keyboard/simulation/modelsim/Keyboard.vt
+FD:/data/Homework/FPGA/Exp/Exp8/Keyboard/simulation/modelsim/Keyboard.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/data/Homework/FPGA/Exp/Exp8/Keyboard/simulation/modelsim/Keyboard.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp8/Keyboard/simulation/modelsim|D:/data/Homework/FPGA/Exp/Exp8/Keyboard/simulation/modelsim/Keyboard.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp8/Keyboard/simulation/modelsim
+R7
+n@keyboard_vlg_tst
+vout
+R8
+!i10b 1
+!s100 _neJ9bmV<7@5<Ll8neDnI1
+Ilonodd^KVXcaCfz^UU]9Z3
+R2
+R0
+w1604299582
+8D:/data/Homework/FPGA/Exp/Exp8/Keyboard/out.v
+FD:/data/Homework/FPGA/Exp/Exp8/Keyboard/out.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/data/Homework/FPGA/Exp/Exp8/Keyboard/out.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp8/Keyboard|D:/data/Homework/FPGA/Exp/Exp8/Keyboard/out.v|
+!i113 1
+R5
+R6
+R7
+vps2_keyboard
+R8
+!i10b 1
+!s100 L?CYUl7YnVF[>CcVa:Y:I0
+IJR>oCI7>W?^l38S`7R[`h3
+R2
+R0
+w1603364481
+8D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ps2_keyboard.v
+FD:/data/Homework/FPGA/Exp/Exp8/Keyboard/ps2_keyboard.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ps2_keyboard.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp8/Keyboard|D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ps2_keyboard.v|
+!i113 1
+R5
+R6
+R7
+vps2_keyboard_model
+R8
+!i10b 1
+!s100 8eOT7XMS<YZCZ1=JIDeF`3
+IEiM8g6?:YM_^d`PYnLXd<0
+R2
+R0
+w1603367708
+8D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ps2_keyboard_model.v
+FD:/data/Homework/FPGA/Exp/Exp8/Keyboard/ps2_keyboard_model.v
+L0 2
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ps2_keyboard_model.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp8/Keyboard|D:/data/Homework/FPGA/Exp/Exp8/Keyboard/ps2_keyboard_model.v|
+!i113 1
+R5
+R6
+R7

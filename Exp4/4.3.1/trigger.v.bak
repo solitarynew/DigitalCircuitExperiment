@@ -1,0 +1,1 @@
+module trigger(clk,in_en,in_d,out_lock1,out_lock2,out_unlock1,out_unlock2);

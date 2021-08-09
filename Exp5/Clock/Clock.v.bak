@@ -1,0 +1,5 @@
+module Clock(clk,clk_1s,HEX);
+	input clk;
+	output reg clk_1s;
+	output HEX;
+	reg [6:0] HEX[0:5];

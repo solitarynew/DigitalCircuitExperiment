@@ -1,0 +1,7 @@
+module ram1(clk,din,inaddr,outaddr,we,dout);
+
+
+
+
+
+endmodule

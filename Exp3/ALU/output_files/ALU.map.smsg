@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at ALU.v(9): always construct contains both blocking and non-blocking assignments File: D:/data/Homework/FPGA/Exp/Exp3/ALU/ALU.v Line: 9

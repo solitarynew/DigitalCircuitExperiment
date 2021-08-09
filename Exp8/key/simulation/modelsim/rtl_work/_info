@@ -1,0 +1,146 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Yongp/Desktop/QUARTUS/EXP8/simulation/modelsim
+vdisplay
+Z1 !s110 1604045599
+!i10b 1
+!s100 ?Mmh46cX]gZJ2N^ZX2lGI2
+IzN9b@n]Rfe<42@@?8[[bz2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1604044743
+8C:/Users/Yongp/Desktop/QUARTUS/EXP8/display.v
+FC:/Users/Yongp/Desktop/QUARTUS/EXP8/display.v
+L0 3
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1604045599.000000
+!s107 C:/Users/Yongp/Desktop/QUARTUS/EXP8/display.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Yongp/Desktop/QUARTUS/EXP8|C:/Users/Yongp/Desktop/QUARTUS/EXP8/display.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/Yongp/Desktop/QUARTUS/EXP8
+Z7 tCvgOpt 0
+vKeyboard
+R1
+!i10b 1
+!s100 ZzGC6@`nAST4Q@N:=V^0[0
+Il=A<:94HUN37B:cW:OCKZ1
+R2
+R0
+w1603698276
+8C:/Users/Yongp/Desktop/QUARTUS/EXP8/Keyboard.v
+FC:/Users/Yongp/Desktop/QUARTUS/EXP8/Keyboard.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Yongp/Desktop/QUARTUS/EXP8/Keyboard.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Yongp/Desktop/QUARTUS/EXP8|C:/Users/Yongp/Desktop/QUARTUS/EXP8/Keyboard.v|
+!i113 1
+R5
+R6
+R7
+n@keyboard
+vkeyboardTop
+R1
+!i10b 1
+!s100 CkaW]DIkLdzJfTc`VnYVn2
+IVS:^J3T<XVhoiAHmGK^NR3
+R2
+R0
+w1604045230
+8C:/Users/Yongp/Desktop/QUARTUS/EXP8/keyboardTop.v
+FC:/Users/Yongp/Desktop/QUARTUS/EXP8/keyboardTop.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Yongp/Desktop/QUARTUS/EXP8/keyboardTop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Yongp/Desktop/QUARTUS/EXP8|C:/Users/Yongp/Desktop/QUARTUS/EXP8/keyboardTop.v|
+!i113 1
+R5
+R6
+R7
+nkeyboard@top
+vkeyboardTop_vlg_tst
+R1
+!i10b 1
+!s100 `]2b56onJ;g]EnU91Mo@g0
+IN8aUSKA;Gnj72RZjOGjXk2
+R2
+R0
+w1604045580
+8C:/Users/Yongp/Desktop/QUARTUS/EXP8/simulation/modelsim/keyboardTop.vt
+FC:/Users/Yongp/Desktop/QUARTUS/EXP8/simulation/modelsim/keyboardTop.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Yongp/Desktop/QUARTUS/EXP8/simulation/modelsim/keyboardTop.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Yongp/Desktop/QUARTUS/EXP8/simulation/modelsim|C:/Users/Yongp/Desktop/QUARTUS/EXP8/simulation/modelsim/keyboardTop.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/Yongp/Desktop/QUARTUS/EXP8/simulation/modelsim
+R7
+nkeyboard@top_vlg_tst
+vps2_keyboard_model
+R1
+!i10b 1
+!s100 0A0n:ga3_jj6kPoiN1DOG2
+Id:MMVX]V=jg<o6m;9M;GE3
+R2
+R0
+w1603368626
+8C:/Users/Yongp/Desktop/QUARTUS/EXP8/ps2_keyboard_model.v
+FC:/Users/Yongp/Desktop/QUARTUS/EXP8/ps2_keyboard_model.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Yongp/Desktop/QUARTUS/EXP8/ps2_keyboard_model.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Yongp/Desktop/QUARTUS/EXP8|C:/Users/Yongp/Desktop/QUARTUS/EXP8/ps2_keyboard_model.v|
+!i113 1
+R5
+R6
+R7
+vtoASCII
+R1
+!i10b 1
+!s100 RXATc?L^G?>P>=`PCZ[=a0
+IIXo484jP@L2R:cVaBIXNT0
+R2
+R0
+w1603848156
+8C:/Users/Yongp/Desktop/QUARTUS/EXP8/toASCII.v
+FC:/Users/Yongp/Desktop/QUARTUS/EXP8/toASCII.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Yongp/Desktop/QUARTUS/EXP8/toASCII.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Yongp/Desktop/QUARTUS/EXP8|C:/Users/Yongp/Desktop/QUARTUS/EXP8/toASCII.v|
+!i113 1
+R5
+R6
+R7
+nto@a@s@c@i@i

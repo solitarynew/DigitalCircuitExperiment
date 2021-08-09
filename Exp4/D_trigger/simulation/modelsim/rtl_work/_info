@@ -1,0 +1,102 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/data/Homework/FPGA/Exp/Exp4/D_trigger/simulation/modelsim
+vD_asynctrigger
+Z1 !s110 1601275038
+!i10b 1
+!s100 gVj>z_Xn85cV3ITo^JjDo1
+I1T[c@^B38UP3bDgBbCbfD1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1600676910
+8D:/data/Homework/FPGA/Exp/Exp4/D_trigger/D_asynctrigger.v
+FD:/data/Homework/FPGA/Exp/Exp4/D_trigger/D_asynctrigger.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1601275038.000000
+!s107 D:/data/Homework/FPGA/Exp/Exp4/D_trigger/D_asynctrigger.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp4/D_trigger|D:/data/Homework/FPGA/Exp/Exp4/D_trigger/D_asynctrigger.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp4/D_trigger
+Z7 tCvgOpt 0
+n@d_asynctrigger
+vD_synctrigger
+R1
+!i10b 1
+!s100 M3^gA56d6fFN__dS=^i=n1
+IVM38e:]ONjBFhTjo]e;PC2
+R2
+R0
+w1600674222
+8D:/data/Homework/FPGA/Exp/Exp4/D_trigger/D_synctrigger.v
+FD:/data/Homework/FPGA/Exp/Exp4/D_trigger/D_synctrigger.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/data/Homework/FPGA/Exp/Exp4/D_trigger/D_synctrigger.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp4/D_trigger|D:/data/Homework/FPGA/Exp/Exp4/D_trigger/D_synctrigger.v|
+!i113 1
+R5
+R6
+R7
+n@d_synctrigger
+vD_trigger
+R1
+!i10b 1
+!s100 3Xi<ck=Y`cAo^5:P^RNbH0
+IYYP`Hc[h050Pbh=HnjH`G2
+R2
+R0
+w1600679411
+8D:/data/Homework/FPGA/Exp/Exp4/D_trigger/D_trigger.v
+FD:/data/Homework/FPGA/Exp/Exp4/D_trigger/D_trigger.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1601275037.000000
+!s107 D:/data/Homework/FPGA/Exp/Exp4/D_trigger/D_trigger.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp4/D_trigger|D:/data/Homework/FPGA/Exp/Exp4/D_trigger/D_trigger.v|
+!i113 1
+R5
+R6
+R7
+n@d_trigger
+vD_trigger_vlg_tst
+R1
+!i10b 1
+!s100 DklVgB0b^ebQF@VMzE0G90
+I9z[IS<W:Q=X45WETkV;f[0
+R2
+R0
+w1601208254
+8D:/data/Homework/FPGA/Exp/Exp4/D_trigger/simulation/modelsim/D_trigger.vt
+FD:/data/Homework/FPGA/Exp/Exp4/D_trigger/simulation/modelsim/D_trigger.vt
+L0 28
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/data/Homework/FPGA/Exp/Exp4/D_trigger/simulation/modelsim/D_trigger.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp4/D_trigger/simulation/modelsim|D:/data/Homework/FPGA/Exp/Exp4/D_trigger/simulation/modelsim/D_trigger.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp4/D_trigger/simulation/modelsim
+R7
+n@d_trigger_vlg_tst

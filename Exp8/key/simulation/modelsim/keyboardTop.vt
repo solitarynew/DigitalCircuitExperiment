@@ -1,0 +1,104 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "10/28/2020 13:38:27"
+                                                                                
+// Verilog Test Bench template for design : keyboardTop
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+
+
+module keyboardTop_vlg_tst();
+parameter [31:0] clock_period = 10;
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clk;
+wire ps2_clk;
+wire ps2_data;
+reg nextdata_n;
+reg clrn;
+// wires                                               
+wire [6:0]  HEX0;
+wire [6:0]  HEX1;
+wire [6:0]  HEX2;
+wire [6:0]  HEX3;
+wire [6:0]  HEX4;
+wire [6:0]  HEX5;
+wire [3:0]  spekey;
+wire [7:0] data;
+wire ready;
+
+// assign statements (if any)    
+ps2_keyboard_model model(
+	.ps2_clk(ps2_clk),
+	.ps2_data(ps2_data)
+);                      
+keyboardTop i1 (
+// port map - connection between master ports and signals/registers   
+	.HEX0(HEX0),
+	.HEX1(HEX1),
+	.HEX2(HEX2),
+	.HEX3(HEX3),
+	.HEX4(HEX4),
+	.HEX5(HEX5),
+	.clk(clk),
+	.ps2_clk(ps2_clk),
+	.ps2_data(ps2_data),
+	.spekey(spekey),
+	.clrn(clrn),
+	.data(data),
+	.ready(ready)
+);
+initial begin /* clock driver */
+clk = 0;
+forever
+#(clock_period/2) clk = ~clk;
+end
+
+initial begin
+clrn = 1'b0; #20;
+clrn = 1'b1; #20;
+model.kbd_sendcode(8'h12); // press 'shift'
+#20 nextdata_n =1'b0; #20 nextdata_n =1'b1;//read data
+model.kbd_sendcode(8'hF0); // break code
+#20 nextdata_n =1'b0; #20 nextdata_n =1'b1; //read data
+model.kbd_sendcode(8'h12); // release 'shift'
+#20 nextdata_n =1'b0; #20 nextdata_n =1'b1; //read data
+model.kbd_sendcode(8'h1B); // press 'S'
+#20 model.kbd_sendcode(8'h1B); // keep pressing 'S'
+#20 model.kbd_sendcode(8'h1B); // keep pressing 'S'
+model.kbd_sendcode(8'hF0); // break code
+model.kbd_sendcode(8'h1B); // release 'S'
+#20
+model.kbd_sendcode(8'h58); // press 'caps'
+#20 nextdata_n =1'b0; #20 nextdata_n =1'b1;//read data
+model.kbd_sendcode(8'hF0); // break code
+#20 nextdata_n =1'b0; #20 nextdata_n =1'b1; //read data
+model.kbd_sendcode(8'h58); // release 'caps'
+#20;
+$stop;
+end
+                                            
+endmodule
+

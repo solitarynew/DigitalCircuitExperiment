@@ -1,0 +1,1 @@
+Block block(clk,in_en,in_d,out_lock1,out_lock2);

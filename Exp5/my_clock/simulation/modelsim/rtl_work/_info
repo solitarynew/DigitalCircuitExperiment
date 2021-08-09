@@ -1,0 +1,100 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/data/Homework/FPGA/Exp/Exp5/my_clock/simulation/modelsim
+vClock
+Z1 !s110 1601025808
+!i10b 1
+!s100 cF[hX4L8b[z1^mzVWj<l<1
+IJYMF3_R[4DGX5`4gjLc``2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1600950269
+8D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v
+FD:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1601025808.000000
+!s107 D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp5/my_clock|D:/data/Homework/FPGA/Exp/Exp5/my_clock/clock.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp5/my_clock
+Z7 tCvgOpt 0
+n@clock
+vmy_clock
+R1
+!i10b 1
+!s100 O`Q=TX9UiLj]z0^;z5fmf2
+I`H7CWOI[EVGS<k[eWHjH:2
+R2
+R0
+w1601025290
+8D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v
+FD:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp5/my_clock|D:/data/Homework/FPGA/Exp/Exp5/my_clock/my_clock.v|
+!i113 1
+R5
+R6
+R7
+vmy_clock_vlg_tst
+R1
+!i10b 1
+!s100 c^Tc<dzNT?:G6DnJOllMX0
+I6c5mn`SnbKfEObCVMbdCh3
+R2
+R0
+w1601025740
+8D:/data/Homework/FPGA/Exp/Exp5/my_clock/simulation/modelsim/my_clock.vt
+FD:/data/Homework/FPGA/Exp/Exp5/my_clock/simulation/modelsim/my_clock.vt
+L0 28
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/data/Homework/FPGA/Exp/Exp5/my_clock/simulation/modelsim/my_clock.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp5/my_clock/simulation/modelsim|D:/data/Homework/FPGA/Exp/Exp5/my_clock/simulation/modelsim/my_clock.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/data/Homework/FPGA/Exp/Exp5/my_clock/simulation/modelsim
+R7
+vTimer
+R1
+!i10b 1
+!s100 ImVmeB[JQHe<ojNJIVUl:2
+I?P7PEkLRA^GK`O71zfG@o2
+R2
+R0
+w1601024984
+8D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v
+FD:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/data/Homework/FPGA/Exp/Exp5/my_clock|D:/data/Homework/FPGA/Exp/Exp5/my_clock/Timer.v|
+!i113 1
+R5
+R6
+R7
+n@timer

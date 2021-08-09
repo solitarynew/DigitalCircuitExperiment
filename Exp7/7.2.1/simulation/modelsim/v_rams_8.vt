@@ -1,0 +1,84 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "10/18/2020 13:39:30"
+                                                                                
+// Verilog Test Bench template for design : v_rams_8
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module v_rams_8_vlg_tst();
+// constants                                           
+// general purpose registers
+//reg eachvec;
+// test vector input registers
+reg clk;
+reg [7:0] din;
+reg [2:0] inaddr;
+reg [2:0] outaddr;
+reg we;
+// wires                                               
+wire [7:0]  dout0;
+wire [7:0]  dout1;
+wire [7:0]  dout2;
+
+// assign statements (if any)                          
+v_rams_8 i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.din(din),
+	.dout0(dout0),
+	.dout1(dout1),
+	.dout2(dout2),
+	.inaddr(inaddr),
+	.outaddr(outaddr),
+	.we(we)
+);
+initial                                                
+begin                                                                          
+	clk=0;we=0;
+		outaddr=0;	#18
+		outaddr=1;	#18
+		outaddr=2;	#18
+		outaddr=3;	#18
+		outaddr=4;	#18
+		outaddr=5;	#18
+		outaddr=6;	#18
+		outaddr=7;	#18
+		
+	we=1;
+		inaddr=2;din=8'hff;	#18
+		outaddr=2;	#8
+	we=0;	#18
+	we=1;
+		inaddr=5;din=8'hab;	#18
+		outaddr=5;	#8
+	we=0;	#18
+$stop;                  
+end
+                                                    
+always                                                                   
+begin                                                                          
+   #5 clk=~clk;                                                                                             
+end
+                                                   
+endmodule
+

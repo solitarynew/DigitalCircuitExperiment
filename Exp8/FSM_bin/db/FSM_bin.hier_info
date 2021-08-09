@@ -1,0 +1,33 @@
+|FSM_bin
+clk => state[0]~reg0.CLK
+clk => state[1]~reg0.CLK
+clk => state[2]~reg0.CLK
+clk => state[3]~reg0.CLK
+in => Mux1.IN4
+in => Mux1.IN5
+in => Mux3.IN6
+in => Mux1.IN6
+in => Mux3.IN7
+in => Mux3.IN8
+in => Mux1.IN7
+in => Mux2.IN7
+in => Mux1.IN8
+in => Mux2.IN8
+in => Mux0.IN7
+in => Mux0.IN8
+in => Mux2.IN5
+in => Mux2.IN6
+in => Mux3.IN3
+in => Mux3.IN4
+in => Mux3.IN5
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+out << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+state[0] << state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] << state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[2] << state[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[3] << state[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
